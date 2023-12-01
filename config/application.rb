@@ -31,7 +31,7 @@ module Cagayan
     config.api_only = true
 
     config.middleware.use ActionDispatch::Cookies
-    const.middleware.use ActionDispatch::Session::CookieStore,
+    config.middleware.use ActionDispatch::Session::CookieStore,
       key: "_cagayan_session",
       same_site: :lax,
       secure: Rails.env.production?
