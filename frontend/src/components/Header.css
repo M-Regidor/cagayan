@@ -1,11 +1,7 @@
-/* /* .home {
-    color: black;
-    text-decoration: none;
-} */
 
 .header {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     background: beige;
     display: flex;
     justify-content: space-between;
@@ -13,6 +9,12 @@
     height: 70px;
     padding-left: 10px;
     padding-right: 15px;
+}
+
+.header-options{
+    display: flex;
+    align-items: center;
+    height: inherit;
 }
 
 
@@ -23,13 +25,12 @@
     justify-content: center;
     gap: 6px;
     list-style: none;
-    height: inherit;
-    /* width: 150px; */
     padding: 0;
+    cursor: pointer;
 }
 
 .user-icon{
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .user a {
@@ -41,7 +42,7 @@
 }
 
 .user-menu {
-    display: none;   
+    display: none;
 }
 
 .user:hover .user-menu {
@@ -51,12 +52,9 @@
     position: absolute;
     background-color: beige;
     border-radius: 3px;
-    /* border: 1px solid black; */
     padding-right: 10px;
     padding-left: 10px;
-    /* margin-top: 1px; */
     right: 17px;
-
 }
 
 .user:hover .user-menu a {
@@ -66,7 +64,8 @@
 
 .new-menu {
     list-style: none;
-    padding-right: 10px;
+    padding: 0;
+    font-size: 30px;
 }
 
 .new-menu a{
@@ -81,6 +80,6 @@
     display: flex;
     position: absolute;
     right: 10px;
-    font-size: 12px;
-    /* background-color: blue; */
+    font-size: 15px;
+    padding-bottom: 2px;
 }
