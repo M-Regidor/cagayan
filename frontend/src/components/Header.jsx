@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { Link, useNavigate } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { logoutUser } from "../store/sessionReducer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +9,6 @@ import "./Header.css"
 
  const Header = () => {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
 
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
@@ -20,7 +19,7 @@ import "./Header.css"
     return (
         <nav className="header">
             <Link className="home" to={"/"}>
-                <h1>CAGAYAN</h1>
+                <img className="logo"src="logo/logo.png" alt="logo" />
             </Link>
             <div className="header-options">
                 {currentUser ? (
@@ -38,7 +37,7 @@ import "./Header.css"
                         <li>
                             <Link to={"login"}>Login!</Link>
                             <div>
-                                <p>Don't have an account? <Link to={"signup"}>Start here</Link></p>
+                                <p>{"Don't have an account?"} <Link to={"signup"}>Start here</Link></p>
                             </div>
                         </li>
                     </ul> 

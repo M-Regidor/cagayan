@@ -36,14 +36,17 @@ const NewUserForm = () => {
                 if (errors.email){
                     return `! ${errors.email}`
                 }
+                break
             case "password":
                 if (errors.password){
                     return `! ${errors.password}`
                 }
+                break
             case "name":
                 if (errors.name){
                     return `! ${errors.name}`
                 }
+                break
             default:
                 break;
         }
@@ -52,7 +55,7 @@ const NewUserForm = () => {
     return (
         <div className="signup-container">
                 <Link className="home" to={'/'}>
-                    <h1>Cagayan</h1>
+                    <img className="logo"src="logo/logo.png" alt="logo" />
                 </Link>
             <div className="signup-form">
                 <form onSubmit={handleSubmit}>

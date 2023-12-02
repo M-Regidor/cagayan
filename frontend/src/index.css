@@ -2,9 +2,16 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: aqua;
 }
 .home {
-    font-family: 'Roboto Condensed', sans-serif;
-    text-decoration: none;
-    color: black;
+    height: inherit;
+    width: 180px;
+}
+
+.logo {
+  width: inherit;
+  height: 65px;
+  padding: 0;
+  margin: 0;
 }
