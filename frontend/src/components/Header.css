@@ -1,0 +1,16 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options{
+    display: flex;
+    gap: 5px;
+}

@@ -1,6 +1,7 @@
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './compenents/Home';
-import NewUserForm from './compenents/NewUserForm';
+import Home from './components/Home';
+import NewUserForm from './components/NewUserForm';
+import NewSessionForm from './components/NewSessionForm';
 
 
 const router = createBrowserRouter([
@@ -11,6 +12,11 @@ const router = createBrowserRouter([
       {
         path: "signup",
         element: <NewUserForm/>
+      },
+      
+      {
+        path: "login",
+        element: <NewSessionForm/>
       }
 
     ]

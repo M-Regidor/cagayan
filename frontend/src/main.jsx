@@ -6,13 +6,13 @@ import configureStore from './store/store';
 import './index.css';
 import { restoreSession } from './utils/csrf';
 
-restoreSession()
+
 const store = configureStore()
 
 if (import.meta.env.MODE !== 'production') {
   window.store = store;
 }
-
+restoreSession()
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
