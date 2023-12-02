@@ -1,37 +1,86 @@
-/* .home {
+/* /* .home {
     color: black;
     text-decoration: none;
 } */
 
-.header{
-    /* border: 0.5px solid black; */
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+.header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
     background: beige;
-    height: 50px;
-    /* width: 95vw; */
-}
-
-.options{
-    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
-.options button {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 14px;
-    background: #9e5454;
-    padding: 8px;
-    border-radius: 1em;
-    border: none;
-    outline: none;
-    cursor: pointer;
+
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    list-style: none;
+    height: inherit;
+    /* width: 150px; */
+    padding: 0;
 }
 
+.user-icon{
+    font-size: 30px;
+}
+
+.user a {
+    text-decoration: none;
+}
+
+.user:hover {
+    background: rgb(207, 207, 185);
+}
+
+.user-menu {
+    display: none;   
+}
+
+.user:hover .user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: beige;
+    border-radius: 3px;
+    /* border: 1px solid black; */
+    padding-right: 10px;
+    padding-left: 10px;
+    /* margin-top: 1px; */
+    right: 17px;
+
+}
+
+.user:hover .user-menu a {
+    display: block;
+    color: black;
+}
+
+.new-menu {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.new-menu a{
+    text-decoration: none;
+}
+
+.new-menu div {
+    display: none;
+}
+
+.new-menu:hover li div {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    /* background-color: blue; */
+}

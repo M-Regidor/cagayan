@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 import { logoutUser } from "../store/sessionReducer"
-import
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 
  
@@ -21,22 +22,28 @@ import "./Header.css"
             <Link className="home" to={"/"}>
                 <h1>CAGAYAN</h1>
             </Link>
-            <div className="options">
+            <div className="header-options">
                 {currentUser ? (
-                    <ul>
-                        <li><Link>Hello,<br />{currentUser.name}</Link><FontAwesomeIcon icon="fa-solid fa-user" style={{color: "#000000",}} /></li> 
-                        <li><Link>Logout</Link></li>
-                    </ul>
+                        <ul className="user">
+                            <li className="user-icon"><FontAwesomeIcon icon={faUser}/></li>                 
+                            <li>Hello,<br/> {currentUser.name}
+                                <div className="user-menu">
+                                    <Link onClick={()=> dispatch(logoutUser(currentUser.id))}>Logout</Link>
+                                </div>
+                            </li>
+                        </ul> 
                     
                 ): (
-                    <>
-                        <button onClick={() => navigate("signup")}>Sign up</button>
-                        <button onClick={() => navigate("login")}>login</button>
-                    </> 
+                    <ul className="new-menu">              
+                        <li>
+                            <Link to={"login"}>Login!</Link>
+                            <div>
+                                <p>Don't have an account? <Link to={"signup"}>Start here</Link></p>
+                            </div>
+                        </li>
+                    </ul> 
                 )}
-                <p>Cart</p>
             </div>
-
         </nav>
     )
  }
