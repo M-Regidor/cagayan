@@ -68,8 +68,8 @@
 .create-account p::after {
 content: '';
 position: absolute;
-height: 2px;
-width: 90%;
+height: 1px;
+width: 90px;
 background-color: black;
 }
 
@@ -84,6 +84,3 @@ top: 50%;
 right: -95px;
 transform: translate(0, -50%);
 }
-
-
-
