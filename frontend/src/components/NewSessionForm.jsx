@@ -36,7 +36,7 @@ const NewSessionForm = () => {
     return (
         <div className="login-container">
             <Link className="home" to={"/"}>
-                <h1>cagayan</h1>
+                <h1>Cagayan</h1>
             </Link>
             <form onSubmit={handleSubmit}>
                 <h2>Sign in</h2>

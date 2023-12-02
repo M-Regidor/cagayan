@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 import { logoutUser } from "../store/sessionReducer"
+import
 import "./Header.css"
 
  
@@ -18,14 +19,14 @@ import "./Header.css"
     return (
         <nav className="header">
             <Link className="home" to={"/"}>
-                <h2>cagayan</h2>
+                <h1>CAGAYAN</h1>
             </Link>
             <div className="options">
                 {currentUser ? (
-                    <>
-                    <h4>Hello, {currentUser.name}</h4>
-                    <button onClick={()=> dispatch(logoutUser(currentUser.id))}>Logout</button>
-                    </>
+                    <ul>
+                        <li><Link>Hello,<br />{currentUser.name}</Link><FontAwesomeIcon icon="fa-solid fa-user" style={{color: "#000000",}} /></li> 
+                        <li><Link>Logout</Link></li>
+                    </ul>
                     
                 ): (
                     <>
