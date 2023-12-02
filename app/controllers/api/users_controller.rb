@@ -9,12 +9,12 @@ class Api::UsersController < ApplicationController
       login!(@user)
       render :info
     else
-      render json: @user.errors, stats:422
+      render json: @user.errors, status: 422
     end
   end
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :name, :password, :password_confirmation)
   end
 end

@@ -1,0 +1,52 @@
+.signup-container {
+     font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form{
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px dashed blue;
+    width: 100vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px dashed red;
+    overflow: hidden;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.signup-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form button {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    background: #ffff00;
+    padding: 8px;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background: #e0e031;
+}

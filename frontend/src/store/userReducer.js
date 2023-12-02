@@ -14,14 +14,15 @@ export const removeCurrentUser = userId => ({
 })
 
 export const createUser = user => async (dispatch) => {
-    const res = await postUser(user)
+    const res = await postUser(user);
 
     if (res.ok) {
-        const data = await res.json()
+        const data = await res.json();
         sessionStorage.setItem("currentUser", JSON.stringify(data.user));
-        return dispatch(receiveCurrentUser(data.user))
+        return dispatch(receiveCurrentUser(data.user));
     } else {
-        console.log("something went wrong")
+        const data = await res.json();
+        throw data
     }
 }
 

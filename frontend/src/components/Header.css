@@ -1,4 +1,4 @@
-a {
+.home {
     color: black;
     text-decoration: none;
 }
@@ -12,5 +12,6 @@ a {
 
 .options{
     display: flex;
+    justify-content: space-between;
     gap: 5px;
 }

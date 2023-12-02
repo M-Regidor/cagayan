@@ -8,14 +8,20 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#
+#  name            :string           not null
+
+
 class User < ApplicationRecord
   attr_reader :password
 
+  validates :name,
+  presence: true,
+  format: { without: /\d/, message: "should not contain numbers" }
+
   validates :email,
     uniqueness: true,
-    length: {in:3..100},
-    format: {with: URI::MailTo::EMAIL_REGEXP}
+    # length: {in:3..100},
+    format: {with: URI::MailTo::EMAIL_REGEXP, message: "Must be a valid email"}
 
   validates :session_token, presence: true, uniqueness: true
   validates :password, length: {in: 6..40, allow_nil:true}

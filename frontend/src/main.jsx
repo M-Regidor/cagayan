@@ -7,18 +7,40 @@ import './index.css';
 import { restoreSession } from './utils/csrf';
 
 
-const store = configureStore()
 
-if (import.meta.env.MODE !== 'production') {
-  window.store = store;
+
+
+
+const initializeApp = () => {
+    const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))
+    let initialState;
+
+    if (currentUser) {
+      initialState = {
+        users: {
+          [currentUser.id]: currentUser
+        },
+        session: {
+          currentUserId: currentUser.id
+        }
+      }
+    }
+  
+    const store = configureStore(initialState)
+
+    if (import.meta.env.MODE !== 'production') {
+      window.store = store;
+    }
+    
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </React.StrictMode>
+    );
 }
-restoreSession()
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
-);
+
+restoreSession().then(initializeApp)

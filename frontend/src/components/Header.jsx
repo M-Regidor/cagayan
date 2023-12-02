@@ -13,16 +13,18 @@ import "./Header.css"
         const id = state.session.currentUserId;
         return state.users[id]
     })
+    
+    console.log(currentUser)
 
     return (
         <nav className="header">
-            <Link to={"/"}>
+            <Link className="home" to={"/"}>
                 <h2>cagayan</h2>
             </Link>
             <div className="options">
                 {currentUser ? (
                     <>
-                    <h4>Hello {currentUser.email}</h4>
+                    <h4>Hello, {currentUser.name}</h4>
                     <button onClick={()=> dispatch(logoutUser(currentUser.id))}>Logout</button>
                     </>
                     
@@ -32,7 +34,7 @@ import "./Header.css"
                         <button onClick={() => navigate("login")}>login</button>
                     </> 
                 )}
-                <p>link</p>
+                <p>Cart</p>
             </div>
 
         </nav>
