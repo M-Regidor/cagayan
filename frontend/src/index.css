@@ -1,5 +1,6 @@
 /* TODO: Add sitewide styles */
 .home {
+    font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
     color: black;
 }

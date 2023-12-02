@@ -25,6 +25,7 @@ const initializeApp = () => {
         }
       }
     }
+    // console.log(initialState)
   
     const store = configureStore(initialState)
 

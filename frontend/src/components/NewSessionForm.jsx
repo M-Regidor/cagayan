@@ -18,7 +18,7 @@ const NewSessionForm = () => {
         if (loggedIn){
             navigate("/")
         }
-    }, [loggedIn])
+    }, [navigate,loggedIn])
 
     const handleSubmit = e =>{
         e.preventDefault();
@@ -52,7 +52,7 @@ const NewSessionForm = () => {
                 <label>
                     Password
                     <input 
-                    type="text"
+                    type="password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     />

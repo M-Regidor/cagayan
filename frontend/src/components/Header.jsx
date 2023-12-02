@@ -14,7 +14,6 @@ import "./Header.css"
         return state.users[id]
     })
     
-    console.log(currentUser)
 
     return (
         <nav className="header">

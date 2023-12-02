@@ -26,7 +26,6 @@ const NewUserForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(createUser({email, password, name})).catch(msg => {
-            // console.log(msg);
             setErrors(msg)
         })
     }
