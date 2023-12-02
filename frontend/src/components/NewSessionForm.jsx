@@ -1,26 +1,47 @@
-import { useDispatch} from "react-redux"
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector} from "react-redux"
+import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../store/sessionReducer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import "./NewSessionForm.css"
 
 
 const NewSessionForm = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const loggedIn = useSelector(state => !!state.session.currentUserId)
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [errors, setErrors] = useState(false);
+
+    useEffect(()=> {
+        if (loggedIn){
+            navigate("/")
+        }
+    }, [loggedIn])
 
     const handleSubmit = e =>{
         e.preventDefault();
-        dispatch(loginUser({email, password}))
+        dispatch(loginUser({email, password})).catch(msg =>{
+            setErrors(msg.errors)
+        })
+    }
+    
+    const handleError = () => {
+        if (errors){
+            return <p>! {errors}</p>
+        }
     }
 
     return (
-        <div>
-            <form onClick={handleSubmit}>
+        <div className="login-container">
+            <Link className="home" to={"/"}>
+                <h1>cagayan</h1>
+            </Link>
+            <form onSubmit={handleSubmit}>
+                <h2>Sign in</h2>
                 <label>
-                    Sign in
+                    Email
                     <input 
                     type="text"
                     value={email}
@@ -36,9 +57,14 @@ const NewSessionForm = () => {
                     onChange={e => setPassword(e.target.value)}
                     />
                 </label>
-
+                {handleError()}
                 <button>Sign in</button>
             </form>
+
+            <div className="create-account">
+                <p>New to Cagayan</p>
+                <button onClick={() => navigate("/signup")}>Create your Cagayan account</button>
+            </div>
         </div>
             
         

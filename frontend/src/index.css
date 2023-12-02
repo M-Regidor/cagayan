@@ -1,1 +1,5 @@
 /* TODO: Add sitewide styles */
+.home {
+    text-decoration: none;
+    color: black;
+}

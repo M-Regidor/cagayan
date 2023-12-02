@@ -52,7 +52,9 @@ const NewUserForm = () => {
 
     return (
         <div className="signup-container">
-                <h1>cagayan</h1>
+                <Link className="home" to={'/'}>
+                    <h1>cagayan</h1>
+                </Link>
             <div className="signup-form">
                 <form onSubmit={handleSubmit}>
                     <h2>Create account</h2>

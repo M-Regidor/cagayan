@@ -7,9 +7,12 @@ export const loginUser = user => async (dispatch) => {
     const res = await postSession(user)
     
     if(res.ok){
-        const data = res.json()
+        const data = await res.json()
         sessionStorage.setItem("currentUser", JSON.stringify(data.user))
         dispatch(receiveCurrentUser(user))
+    } else {
+        const data = await res.json()
+        throw data
     }
 }
 

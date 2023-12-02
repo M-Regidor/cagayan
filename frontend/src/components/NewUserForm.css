@@ -1,5 +1,5 @@
 .signup-container {
-     font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -11,17 +11,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 1px dashed blue;
+    /* border: 1px dashed blue; */
     width: 100vw;
 }
 
-form {
+.signup-form form {
     display: flex;
     flex-direction: column;
     width: 250px;
     padding-left: 20px;
     padding-right: 20px;
-    border: 2px dashed red;
+    border: 2px solid red;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -36,7 +37,7 @@ form {
     flex-direction: column;
 }
 
-.signup-form button {
+.login-container button {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 14px;
     background: #ffff00;
@@ -47,6 +48,6 @@ form {
     cursor: pointer;
 }
 
-.signup-form button:hover {
+.login-container button:hover {
     background: #e0e031;
 }
