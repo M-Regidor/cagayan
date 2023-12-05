@@ -8,7 +8,6 @@ export const loginUser = user => async (dispatch) => {
     
     if(res.ok){
         const data = await res.json()
-        // console.log(data)
         sessionStorage.setItem("currentUser", JSON.stringify(data.user))
         dispatch(receiveCurrentUser(data.user))
     } else {
