@@ -1,12 +1,24 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+require 'faker'
 
 
 User.create(email: "demo@user.io", name: "Demo User", password:"test123")
+
+
+ActiveRecord::Base.connection.execute('TRUNCATE TABLE products RESTART IDENTITY CASCADE')
+
+
+Product.destroy_all
+
+# Create products
+40.times do
+  category_name = %w[Electronics Clothing Books Home\ Goods Toys].sample
+
+
+  product = Product.create(
+    name: Faker::Commerce.product_name,
+    price: rand(1.0..300.00).round(2),
+    description: Faker::Lorem.sentence(word_count: 10),
+    rating: rand(1..5),
+    category: category_name
+  )
+end
