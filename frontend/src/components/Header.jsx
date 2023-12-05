@@ -35,7 +35,7 @@ import "./Header.css"
                 ): (
                     <ul className="new-menu">              
                         <li>
-                            <Link to={"login"}>Login!</Link>
+                            <Link to={"login"}>Login</Link>
                             <div>
                                 <p>{"Don't have an account?"} <Link to={"signup"}>Start here</Link></p>
                             </div>

@@ -32,7 +32,6 @@ const userReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             newState[action.user.id] = action.user
-            console.log(action)
             return newState
         case REMOVE_CURRENT_USER:
             delete newState[action.userId]
