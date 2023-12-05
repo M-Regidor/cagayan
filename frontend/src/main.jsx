@@ -22,10 +22,14 @@ const initializeApp = () => {
         },
         session: {
           currentUserId: currentUser.id
+        },
+        entities: {
+          
         }
       }
     }
-  
+    
+    
   
     const store = configureStore(initialState)
 

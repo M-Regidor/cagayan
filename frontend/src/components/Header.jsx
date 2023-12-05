@@ -1,20 +1,19 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector} from "react-redux"
 import { Link} from "react-router-dom"
 import { logoutUser } from "../store/sessionReducer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 
- 
 
- const Header = () => {
+
+const Header = () => {
     const dispatch = useDispatch()
 
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
         return state.users[id]
     })
-
 
 
     return (
