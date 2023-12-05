@@ -2,12 +2,19 @@ import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home';
 import NewUserForm from './components/NewUserForm';
 import NewSessionForm from './components/NewSessionForm';
+import ProductIndex from './components/ProductIndex';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
+    children: [
+      {
+        index: true,
+        element: <ProductIndex/>
+      }
+    ]
   },
   {
     path: "login",

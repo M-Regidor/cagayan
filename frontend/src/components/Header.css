@@ -15,8 +15,8 @@
     display: flex;
     align-items: center;
     height: inherit;
+    gap: 25px;
 }
-
 
 
 .user {
@@ -29,59 +29,54 @@
     cursor: pointer;    
 }
 
-.user-icon{
-    font-size: 35px;
-}
 
-.user a {
-    text-decoration: none;
-}
+
 
 .user:hover {
     background: rgb(207, 207, 185);
 }
 
+/* User drop down */
 .user-menu {
     display: none;
-}
-
-
-.user:hover .user-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+    border: 1px solid black;
     background-color: beige;
     border-radius: 3px;
     padding-right: 10px;
     padding-left: 10px;
-    right: 17px;
-}
-
-.user:hover .user-menu a {
-    display: block;
-    color: black;
     
 }
 
-.new-menu {
-    list-style: none;
-    padding: 0;
-    font-size: 30px;
-}
-
-.new-menu a{
+.user-menu a {
     text-decoration: none;
+    color: black;
 }
 
+.user-icon{
+    font-size: 40px;
+}
+
+.cart-icon {
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.user:hover .user-menu {
+    display: block;
+    position: absolute;
+}
+
+
+/* user sign up */
 .new-menu div {
     display: none;
 }
 
 .new-menu:hover li div {
-    display: flex;
+    display: block;
     position: absolute;
-    right: 10px;
     font-size: 15px;
     padding-bottom: 2px;
 }

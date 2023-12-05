@@ -10,10 +10,9 @@ ActiveRecord::Base.connection.execute('TRUNCATE TABLE products RESTART IDENTITY 
 Product.destroy_all
 
 # Create products
-40.times do
+# 20
+20.times do
   category_name = %w[Electronics Clothing Books Home\ Goods Toys].sample
-
-
   product = Product.create(
     name: Faker::Commerce.product_name,
     price: rand(1.0..300.00).round(2),

@@ -21,9 +21,11 @@ export const fetchProducts = () => async (dispatch) => {
     }
 
 }
-export const selectProducts = state => state.values
+export const selectProducts = state => state.products
 
-export const selectProductsArray = createSelector(selectProducts, product => Object.values(product));
+export const selectProductsArray = createSelector(selectProducts, product => 
+    Object.values(product)
+);
 
 const productReducer = (state = {}, action) => {
     const newState = Object.assign({}, state)

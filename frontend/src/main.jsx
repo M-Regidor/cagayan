@@ -22,9 +22,6 @@ const initializeApp = () => {
         },
         session: {
           currentUserId: currentUser.id
-        },
-        entities: {
-          
         }
       }
     }
