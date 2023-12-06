@@ -45,4 +45,4 @@ const initializeApp = () => {
 
 
 
-restoreSession().then(initializeApp)
+await restoreSession().then(initializeApp)

@@ -1,8 +1,10 @@
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import NewUserForm from './components/NewUserForm';
 import NewSessionForm from './components/NewSessionForm';
 import ProductIndex from './components/ProductIndex';
+import ProductShow from './components/ProductShow';
+import Header from './components/Header';
 
 
 const router = createBrowserRouter([
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <ProductIndex/>
+      },
+      {
+        path: ":productId",
+        element: <ProductShow/>
       }
     ]
   },
@@ -33,7 +39,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+        <RouterProvider router={router}/>
     )
 }
 

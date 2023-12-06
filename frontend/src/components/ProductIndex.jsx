@@ -3,12 +3,13 @@ import { Link } from "react-router-dom"
 import { fetchProducts, selectProductsArray } from "../store/productReducer"
 import { useEffect } from "react"
 import "./ProductIndex.css"
+import { restoreSession } from "../utils/csrf"
 
 
 const ProductIndex = () => {
     const dispatch = useDispatch()
     const products = useSelector(selectProductsArray)
-   
+    restoreSession()
     useEffect(()=> {
         dispatch(fetchProducts())
     }, [dispatch])
@@ -24,7 +25,7 @@ const ProductIndex = () => {
                             </Link>
                         </div>
                         <div className="product-info-bottom">
-                            <div className="product-name"><Link>{product.name}</Link></div>
+                            <div className="product-name"><Link to={`/${product.id}`}>{product.name}</Link></div>
                             <div className="product-category">{product.category}</div>
                             <div className="product-rating">Rating: {product.rating}</div> 
                             <div className="product-price">${product.price}</div>
