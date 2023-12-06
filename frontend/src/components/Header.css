@@ -1,6 +1,6 @@
 .navbar-container {
     height: 100px;
-    width: 100vw;
+    width: inherit;
     min-width: 700px;
     border: 1px dashed red
 }
@@ -53,7 +53,7 @@
 }
 
 .navbar-top-middle form button {
-    height: 99%;
+    height: 100%;
     width: 50px;
     border: none;
     border-radius: 7px;

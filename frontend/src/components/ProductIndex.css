@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: inherit;
     min-width: 700px;
     padding: 0;
     margin: 0;
@@ -13,7 +13,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid black;
     padding: 0;
     min-width: 805px;
     max-width: 1050px;
@@ -23,14 +22,13 @@
 .product-info-container {
     display: flex;
     flex-direction: column;
-    border: 1px dashed blue;
     width: 250px;
-    height: 400px;
+    height: 450px;
 }
 
 .product-info-top{
     width: inherit;
-    height: 50%;
+    height: 60%;
 }
 
 .product-img {
@@ -44,7 +42,7 @@
     flex-direction: column;
     gap: 10px;
     width: inherit;
-    height: 50%;
+    height: 40%;
     font-size: 20px;
 }
 
