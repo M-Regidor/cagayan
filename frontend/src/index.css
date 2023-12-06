@@ -5,7 +5,15 @@ body {
 }
 .home {
     height: inherit;
-    width: 180px;
+    width: 170px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 .logo {
