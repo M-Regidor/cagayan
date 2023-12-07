@@ -16,10 +16,10 @@ export const receiveProductInfo = product => ({
 
 export const fetchProducts = () => async (dispatch) => {
     const res = await getProducts();
-
     let data;
 
     if (res.ok){
+
         data = await res.json()
         dispatch(receiveProducts(data))
     } else {
@@ -32,7 +32,6 @@ export const fetchProduct = productId => async (dispatch) => {
     const res = await getProduct(productId);
 
     let data;
-
     if (res.ok){
         data = await res.json()
         dispatch(receiveProductInfo(data))
@@ -46,6 +45,7 @@ export const fetchProduct = productId => async (dispatch) => {
 
 
 export const selectProducts = state => state.products
+export const selectProduct = productId => state => state.products[productId]
 
 export const selectProductsArray = createSelector(selectProducts, product => 
     Object.values(product)

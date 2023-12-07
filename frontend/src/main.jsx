@@ -26,8 +26,7 @@ const initializeApp = () => {
       }
     }
     
-    
-  
+
     const store = configureStore(initialState)
 
     if (import.meta.env.MODE !== 'production') {
@@ -44,5 +43,4 @@ const initializeApp = () => {
 }
 
 
-
-await restoreSession().then(initializeApp)
+restoreSession().then(initializeApp)

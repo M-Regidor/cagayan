@@ -1,10 +1,10 @@
-import { Navigate, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import NewUserForm from './components/NewUserForm';
 import NewSessionForm from './components/NewSessionForm';
 import ProductIndex from './components/ProductIndex';
 import ProductShow from './components/ProductShow';
-import Header from './components/Header';
+
 
 
 const router = createBrowserRouter([
@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     element: <Home/>,
     children: [
       {
-        index: true,
+        index: "true",
         element: <ProductIndex/>
       },
       {
-        path: ":productId",
+        path: "products/:productId",
         element: <ProductShow/>
       }
     ]

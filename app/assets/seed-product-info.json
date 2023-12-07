@@ -1,0 +1,195 @@
+{
+    "home": [
+      {
+        "name": "BrewMaster Pro Series Espresso Machine",
+        "price": "249.99",
+        "description": "State-of-the-art espresso machine for coffee enthusiasts. Features include a built-in grinder, customizable brewing settings, and sleek stainless steel design.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.5"
+      },
+      {
+        "name": "Chef's Choice Premium Stainless Steel Cookware Set",
+        "price": "149.99",
+        "description": "High-quality stainless steel cookware set featuring a variety of pots and pans. Durable, non-reactive, and suitable for a wide range of cooking styles.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.8"
+      },
+      {
+        "name": "SmoothBlend Max Power Blender",
+        "price": "89.99",
+        "description": "Powerful blender with multiple speed settings for smoothies, soups, and more. Durable blades and a sleek design make it a versatile and stylish kitchen accessory.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.2"
+      },
+      {
+        "name": "SlowSimmer Deluxe Programmable Slow Cooker",
+        "price": "79.99",
+        "description": "Programmable slow cooker with a large capacity for family meals. Features include digital controls, timer, and automatic keep-warm function.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.6"
+      },
+      {
+        "name": "DreamComfort Luxe Bedding Collection",
+        "price": "129.99",
+        "description": "Luxurious bedding set with a soft and comfortable feel. Includes a fitted sheet, flat sheet, pillowcases, and a stylish duvet cover for a complete bedroom upgrade.",
+        "category": "Home and Furniture",
+        "rating": "4.7"
+      },
+      {
+        "name": "Stellar Sip Ceramic Coffee Mug",
+        "price": "3.54",
+        "description": "High-quality ceramic construction for durability. Generous 14-ounce capacity for ample beverage enjoyment. Comfortable C-shaped handle for a secure grip. Smooth glazed finish for easy cleaning. Double-walled insulation for prolonged temperature retention.",
+        "category": "Home and Furniture",
+        "rating": "3.7"
+      }
+    ],
+    "electronics": [
+      {
+        "name": "TechMaster Pro Smartphone",
+        "price": "699.99",
+        "description": "Flagship smartphone with advanced features, high-resolution camera, and a sleek design. Perfect for productivity and entertainment on the go.",
+        "category": "Electronics",
+        "rating": "4.9"
+      },
+      {
+        "name": "UltraVision 4K Smart TV",
+        "price": "899.99",
+        "description": "Immersive 4K smart TV with a large screen, vivid colors, and smart connectivity. Elevate your home entertainment experience with this top-tier television.",
+        "category": "Electronics",
+        "rating": "4.8"
+      },
+      {
+        "name": "SoundWave Pro Wireless Earbuds",
+        "price": "129.99",
+        "description": "Premium wireless earbuds with noise cancellation, high-fidelity sound, and a comfortable fit. Ideal for music lovers and on-the-go professionals.",
+        "category": "Electronics",
+        "rating": "4.5"
+      },
+      {
+        "name": "GamerXtreme Gaming Laptop",
+        "price": "1499.99",
+        "description": "High-performance gaming laptop with cutting-edge graphics, fast processors, and a customizable RGB keyboard. Dominate the gaming world with this powerhouse.",
+        "category": "Electronics",
+        "rating": "4.7"
+      },
+      {
+        "name": "SmartHome Hub and Speaker",
+        "price": "199.99",
+        "description": "Central hub for smart home control with integrated voice-activated speaker. Streamline your smart home devices and enjoy voice-controlled convenience.",
+        "category": "Electronics",
+        "rating": "4.6"
+      }
+    ],
+    "clothing": [
+      {
+        "name": "Stylish Denim Jacket",
+        "price": "59.99",
+        "description": "Classic denim jacket with a modern twist. Features distressed details, a comfortable fit, and versatile styling options for a trendy look.",
+        "category": "Clothing and Fashion",
+        "rating": "4.3"
+      },
+      {
+        "name": "Elegant Evening Gown",
+        "price": "179.99",
+        "description": "A breathtaking evening gown for special occasions. Flowing fabric, intricate details, and a flattering silhouette make this gown a showstopper.",
+        "category": "Clothing and Fashion",
+        "rating": "4.7"
+      },
+      {
+        "name": "ActiveFit Performance Leggings",
+        "price": "39.99",
+        "description": "High-performance leggings for active lifestyles. Moisture-wicking fabric, breathable design, and a comfortable fit for workouts and everyday wear.",
+        "category": "Clothing and Fashion",
+        "rating": "4.5"
+      },
+      {
+        "name": "Classic Leather Handbag",
+        "price": "89.99",
+        "description": "Timeless leather handbag with a chic design. Spacious interior, durable construction, and versatile styling make it a must-have accessory.",
+        "category": "Clothing and Fashion",
+        "rating": "4.6"
+      },
+      {
+        "name": "Casual Weekend Tee",
+        "price": "19.99",
+        "description": "Comfortable and stylish tee for casual weekends. Soft cotton fabric, relaxed fit, and a variety of colors for effortless and laid-back style.",
+        "category": "Clothing and Fashion",
+        "rating": "4.2"
+      }
+    ],
+    "health_and_beauty": [
+        {
+            "name": "GlowGlam Skincare Bundle",
+            "price": "79.99",
+            "description": "Complete skincare bundle for a radiant complexion. Includes cleanser, toner, moisturizer, and a rejuvenating face mask. Infused with natural ingredients for a spa-like experience at home.",
+            "category": "Health and Beauty",
+            "rating": "4.6"
+        },      
+      {
+        "name": "Revitalize Pro Hair Dryer",
+        "price": "49.99",
+        "description": "Professional-grade hair dryer for salon-quality results. Features multiple heat and speed settings, a concentrator nozzle, and a sleek ergonomic design.",
+        "category": "Health and Beauty",
+        "rating": "4.5"
+      },
+      {
+        "name": "GlowMaster Facial Cleansing Brush",
+        "price": "29.99",
+        "description": "Advanced facial cleansing brush for radiant skin. Waterproof design, multiple brush heads, and adjustable intensity levels for a personalized skincare routine.",
+        "category": "Health and Beauty",
+        "rating": "4.2"
+      },
+      {
+        "name": "Serenity Aromatherapy Diffuser",
+        "price": "34.99",
+        "description": "Essential oil diffuser for a calming and aromatic atmosphere. Ultrasonic technology, color-changing LED lights, and automatic shut-off for safe use.",
+        "category": "Health and Beauty",
+        "rating": "4.8"
+      },
+      {
+        "name": "FitFuel Pro Blender Bottle",
+        "price": "14.99",
+        "description": "Innovative blender bottle for convenient protein shakes and smoothies. Features a built-in mixing ball, leak-proof design, and easy-to-carry handle.",
+        "category": "Health and Beauty",
+        "rating": "4.0"
+      }
+    ],
+    "home_and_furniture": [
+      {
+        "name": "EcoComfort Recliner Chair",
+        "price": "299.99",
+        "description": "Comfortable recliner chair with eco-friendly materials. Plush cushioning, adjustable reclining positions, and a stylish design for ultimate relaxation.",
+        "category": "Home and Furniture",
+        "rating": "4.6"
+      },
+      {
+        "name": "ModernLiving Expandable Dining Table",
+        "price": "499.99",
+        "description": "Sleek and functional dining table with an expandable design. Perfect for entertaining guests with its versatile size and contemporary aesthetic.",
+        "category": "Home and Furniture",
+        "rating": "4.8"
+      },
+      {
+        "name": "ZenZone Meditation Cushion Set",
+        "price": "69.99",
+        "description": "Complete meditation cushion set for serene mindfulness practices. Includes a comfortable cushion, mat, and supportive props for a peaceful meditation experience.",
+        "category": "Home and Furniture",
+        "rating": "4.4"
+      },
+      {
+        "name": "CozyNest Faux Fur Throw Blanket",
+        "price": "39.99",
+        "description": "Luxurious faux fur throw blanket for added warmth and style. Soft and cozy material, elegant design, and a perfect addition to any living space.",
+        "category": "Home and Furniture",
+        "rating": "4.7"
+      },
+      {
+        "name": "HarmonyHome Wall Art Set",
+        "price": "79.99",
+        "description": "Set of decorative wall art pieces to enhance your home decor. Intricate designs, high-quality materials, and easy installation for an artistic touch.",
+        "category": "Home and Furniture",
+        "rating": "4.5"
+      }
+    ]
+  }
+  
