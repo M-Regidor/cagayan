@@ -17,7 +17,7 @@
       {
         "name": "QuickHeat Pro Microwave Oven",
         "price": "129.99",
-        "description": "The QuickHeat Pro Microwave Oven is a high-performance appliance designed for fast and efficient cooking. It features advanced heating technology, multiple power levels, and a spacious interior for all your cooking needs. The sleek design and user-friendly interface make it a perfect addition to any kitchen.",
+        "description": "The QuickHeat Pro Microwave Oven offers fast, efficient cooking with advanced heating tech, multiple power levels, and a spacious interior. Its sleek design and user-friendly interface make it a perfect addition to any kitchen.",
         "category": "Home and Kitchen Appliances",
         "rating": "4.8"
       },
@@ -111,40 +111,40 @@
       }
     ],
     "health_and_beauty": [
-        {
-            "name": "GlowGlam Skincare Bundle",
-            "price": "79.99",
-            "description": "Complete skincare bundle for a radiant complexion. Includes cleanser, toner, moisturizer, and a rejuvenating face mask. Infused with natural ingredients for a spa-like experience at home.",
-            "category": "Health and Beauty",
-            "rating": "4.6"
-        },      
+      {
+        "name": "GlowGlam Skincare Bundle",
+        "price": "79.99",
+        "description": "Radiant complexion with cleanser, toner, moisturizer, and face mask. Natural ingredients for a spa-like experience.",
+        "category": "Health and Beauty",
+        "rating": "4.6"
+      },
       {
         "name": "Revitalize Pro Hair Dryer",
         "price": "49.99",
-        "description": "Professional-grade hair dryer for salon-quality results. Features multiple heat and speed settings, a concentrator nozzle, and a sleek ergonomic design.",
+        "description": "Salon-quality results with multiple settings, concentrator nozzle, and sleek design.",
         "category": "Health and Beauty",
         "rating": "4.5"
       },
       {
         "name": "VitaBoost Daily Multivitamin",
         "price": "24.99",
-        "description": "VitaBoost is a comprehensive daily multivitamin that supports overall health and well-being. Packed with essential vitamins and minerals, this supplement promotes immune system function, energy production, and healthy skin. Formulated for easy absorption and suitable for daily use, VitaBoost is an essential addition to your wellness routine.",
+        "description": "Comprehensive support for health and well-being. Essential vitamins, immune support, energy production, and healthy skin.",
         "category": "Health and Wellness",
         "rating": "4.9"
       },
       {
         "name": "Serenity Aromatherapy Diffuser",
         "price": "34.99",
-        "description": "Essential oil diffuser for a calming and aromatic atmosphere. Ultrasonic technology, color-changing LED lights, and automatic shut-off for safe use.",
+        "description": "Calming atmosphere with ultrasonic tech, LED lights, and automatic shut-off.",
         "category": "Health and Beauty",
         "rating": "4.8"
       },
       {
         "name": "FitFuel Pro Blender Bottle",
         "price": "14.99",
-        "description": "Innovative blender bottle for convenient protein shakes and smoothies. Features a built-in mixing ball, leak-proof design, and easy-to-carry handle.",
+        "description": "Convenient shakes and smoothies with mixing ball, leak-proof design, and easy carry.",
         "category": "Health and Beauty",
         "rating": "4.0"
       }
-    ]
+    ]    
   }

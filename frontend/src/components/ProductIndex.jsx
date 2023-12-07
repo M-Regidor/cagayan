@@ -19,8 +19,8 @@ const ProductIndex = () => {
                 {products.map(product => 
                     <li className="product-info-container" key={product.id}>
                         <div className="product-info-top">                            
-                            <Link to={`/${product.id}`} > 
-                                <div className="product-img"><img src={product.imgUrl} alt="" /></div>
+                            <Link to={`products/${product.id}`} > 
+                                <div className="product-img"><img src={product.imgUrls} alt="" /></div>
                             </Link>
                         </div>
                         <div className="product-info-bottom">

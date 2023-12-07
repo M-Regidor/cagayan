@@ -52,7 +52,9 @@ const Header = () => {
                             </li>
                         </ul> 
                     )}
-                    <Link className="cart-icon"><FontAwesomeIcon icon={faCartShopping}/>0</Link>
+                    <Link onClick={e => e.preventDefault()}className="cart-icon">
+                        <FontAwesomeIcon icon={faCartShopping}/>0
+                    </Link>
                 </div>
             </nav>
         </header>

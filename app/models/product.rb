@@ -20,5 +20,5 @@ class Product < ApplicationRecord
   validates :rating, presence: true, numericality: { less_than_or_equal_to: 5 }
   validates :category, presence: true
 
-  has_many_attached :image
+  has_many_attached :images
 end

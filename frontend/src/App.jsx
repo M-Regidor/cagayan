@@ -23,6 +23,14 @@ const router = createBrowserRouter([
     ]
   },
   {
+    index: "true",
+    element: <ProductIndex/>
+  },
+  {
+    path: "products/:productId",
+    element: <ProductShow/>
+  },
+  {
     path: "login",
     element: <NewSessionForm/>
   },

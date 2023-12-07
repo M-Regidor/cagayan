@@ -10,10 +10,6 @@ const ProductShow = () => {
     const {productId} = useParams()
     const product = useSelector(selectProduct(productId))
 
-    const imgOne = product?.imgUrls[0]
-    const imgTwo = product?.imgUrls[1]
-    const imgThree = product?.imgUrls[2]
-
     useEffect(()=>{
         dispatch(fetchProduct(productId))
     },[dispatch, productId])
@@ -27,16 +23,16 @@ const ProductShow = () => {
             <div className="show-details-container">
                 <div className="show-details-left">
                     <div className="show-img-container">
-                        <div className="show-img-main"><img src={imgOne} alt="" /> </div>
+                        <div className="show-img-main"><img src={product?.imgUrls[0]} alt="" /> </div>
                         <div className="show-img-sub-container">
                             <div className="show-img-sub">
-                                <img src={imgOne} alt="" />
+                                <img src={product?.imgUrls[0]} alt="" />
                             </div>
                             <div className="show-img-sub">
-                                <img src={imgTwo} alt="" />
+                                <img src={product?.imgUrls[1]} alt="" />
                             </div>
                             <div className="show-img-sub">
-                                <img src={imgThree} alt="" />
+                                <img src={product?.imgUrls[2]} alt="" />
                             </div>
                         </div>
                     </div>

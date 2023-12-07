@@ -6,19 +6,20 @@ product = JSON.parse(product_data)
 
 
 
-ActiveRecord::Base.connection.execute('TRUNCATE TABLE products RESTART IDENTITY CASCADE')
+
 
 
 
 
 
 Product.destroy_all
-
+ActiveRecord::Base.connection.execute('TRUNCATE TABLE products RESTART IDENTITY CASCADE')
 
 User.create(email: "demo@user.io", name: "Demo User", password:"test123")
+
 puts "seeding home products..."
 
-product["home"].each do |item, i|
+product["home"].each do |item|
     new_item = Product.create(
       name: item["name"],
       price: item["price"],
@@ -27,13 +28,13 @@ product["home"].each do |item, i|
       category: item["category"]
       )
 
-    product = Product.last.name
-    aws_link = product.split.join("+")
+
+    aws_link = new_item.name.split.join("+")
 
     (1..3).each do |i|
-      new_item.image.attach(
+      new_item.images.attach(
         io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/home/#{aws_link}/#{aws_link}-#{i}.jpg"),
-        filename: "#{product}-#{i}"
+        filename: "#{new_item.name}-#{i}"
       )
     end
 end
@@ -48,61 +49,59 @@ product["electronics"].each do |item|
     category: item["category"]
     )
 
-  product = Product.last.name
-  aws_link = product.split.join("+")
+  aws_link = new_item.name.split.join("+")
 
 
   (1..3).each do |i|
-    new_item.image.attach(
+    new_item.images.attach(
       io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/electronics/#{aws_link}/#{aws_link}-#{i}.png"),
-      filename: "#{product}-#{i}"
+      filename: "#{new_item.name}-#{i}"
     )
   end
 end
 
 
 puts "seeding clothing products..."
-# product["clothing"].each do |item|
-#   Product.create(
-#     name: item["name"],
-#     price: item["price"],
-#     description: item["description"],
-#     rating: item["rating"],
-#     category: item["category"]
-#     )
-
-#   product = Product.last.name
-#   aws_link = product.split.join("+")
-
-#   (1..3).each do |i|
-#     Product.last.image.attach(
-#       io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/clothing/#{aws_link}/#{aws_link}-#{i}.png"),
-#       filename: "#{product}-#{i}"
-#     )
-#   end
-# end
+product["clothing"].each do |item|
+  new_item = Product.create(
+    name: item["name"],
+    price: item["price"],
+    description: item["description"],
+    rating: item["rating"],
+    category: item["category"]
+    )
 
 
-puts "seeding health_and_beauty products..."
-# product["health_and_beauty"].each_with_index do |item, i|
-#   Product.create(
-#     name: item["name"],
-#     price: item["price"],
-#     description: item["description"],
-#     rating: item["rating"],
-#     category: item["category"]
-#     )
+  aws_link = new_item.name.split.join("+")
 
-#   product = Product.last.name
-#   aws_link = product.split.join("+")
+  (1..3).each do |i|
+    Product.last.images.attach(
+      io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/clothing/#{aws_link}/#{aws_link}-#{i}.png"),
+      filename: "#{new_item.name}-#{i}"
+    )
+  end
+end
 
-#   (1..3).each do |i|
-#     Product.last.image.attach(
-#       io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/health_and_beauty/#{aws_link}/#{aws_link}-#{i}.png"),
-#       filename: "#{product}-#{i}"
-#     )
-#   end
-# end
+
+# puts "seeding health_and_beauty products..."
+product["health_and_beauty"].each_with_index do |item, i|
+  new_item = Product.create(
+    name: item["name"],
+    price: item["price"],
+    description: item["description"],
+    rating: item["rating"],
+    category: item["category"]
+    )
+
+  aws_link = new_item.name.split.join("+")
+
+  (1..3).each do |i|
+    Product.last.images.attach(
+      io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/health_and_beauty/#{aws_link}/#{aws_link}-#{i}.png"),
+      filename: "#{new_item.name}-#{i}"
+    )
+  end
+end
 
 
 

@@ -24,6 +24,7 @@
     flex-direction: column;
     width: 250px;
     height: 450px;
+    margin-bottom: 40px;
 }
 
 .product-info-top{
