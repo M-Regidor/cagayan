@@ -1,13 +1,6 @@
 {
     "home": [
       {
-        "name": "BrewMaster Pro Series Espresso Machine",
-        "price": "249.99",
-        "description": "State-of-the-art espresso machine for coffee enthusiasts. Features include a built-in grinder, customizable brewing settings, and sleek stainless steel design.",
-        "category": "Home and Kitchen Appliances",
-        "rating": "4.5"
-      },
-      {
         "name": "Chef's Choice Premium Stainless Steel Cookware Set",
         "price": "149.99",
         "description": "High-quality stainless steel cookware set featuring a variety of pots and pans. Durable, non-reactive, and suitable for a wide range of cooking styles.",
@@ -22,11 +15,11 @@
         "rating": "4.2"
       },
       {
-        "name": "SlowSimmer Deluxe Programmable Slow Cooker",
-        "price": "79.99",
-        "description": "Programmable slow cooker with a large capacity for family meals. Features include digital controls, timer, and automatic keep-warm function.",
+        "name": "QuickHeat Pro Microwave Oven",
+        "price": "129.99",
+        "description": "The QuickHeat Pro Microwave Oven is a high-performance appliance designed for fast and efficient cooking. It features advanced heating technology, multiple power levels, and a spacious interior for all your cooking needs. The sleek design and user-friendly interface make it a perfect addition to any kitchen.",
         "category": "Home and Kitchen Appliances",
-        "rating": "4.6"
+        "rating": "4.8"
       },
       {
         "name": "DreamComfort Luxe Bedding Collection",
@@ -89,10 +82,10 @@
         "rating": "4.3"
       },
       {
-        "name": "Elegant Evening Gown",
-        "price": "179.99",
-        "description": "A breathtaking evening gown for special occasions. Flowing fabric, intricate details, and a flattering silhouette make this gown a showstopper.",
-        "category": "Clothing and Fashion",
+        "name": "CozyComfort Hooded Sweatshirt",
+        "price": "49.99",
+        "description": "Stay warm and stylish with our CozyComfort Hooded Sweatshirt. Made from high-quality cotton blend material, this sweatshirt provides ultimate comfort. The hood and front pocket add a practical touch, while the modern design ensures you look good wherever you go.",
+        "category": "Clothing",
         "rating": "4.7"
       },
       {
@@ -133,11 +126,11 @@
         "rating": "4.5"
       },
       {
-        "name": "GlowMaster Facial Cleansing Brush",
-        "price": "29.99",
-        "description": "Advanced facial cleansing brush for radiant skin. Waterproof design, multiple brush heads, and adjustable intensity levels for a personalized skincare routine.",
-        "category": "Health and Beauty",
-        "rating": "4.2"
+        "name": "VitaBoost Daily Multivitamin",
+        "price": "24.99",
+        "description": "VitaBoost is a comprehensive daily multivitamin that supports overall health and well-being. Packed with essential vitamins and minerals, this supplement promotes immune system function, energy production, and healthy skin. Formulated for easy absorption and suitable for daily use, VitaBoost is an essential addition to your wellness routine.",
+        "category": "Health and Wellness",
+        "rating": "4.9"
       },
       {
         "name": "Serenity Aromatherapy Diffuser",
@@ -153,43 +146,5 @@
         "category": "Health and Beauty",
         "rating": "4.0"
       }
-    ],
-    "home_and_furniture": [
-      {
-        "name": "EcoComfort Recliner Chair",
-        "price": "299.99",
-        "description": "Comfortable recliner chair with eco-friendly materials. Plush cushioning, adjustable reclining positions, and a stylish design for ultimate relaxation.",
-        "category": "Home and Furniture",
-        "rating": "4.6"
-      },
-      {
-        "name": "ModernLiving Expandable Dining Table",
-        "price": "499.99",
-        "description": "Sleek and functional dining table with an expandable design. Perfect for entertaining guests with its versatile size and contemporary aesthetic.",
-        "category": "Home and Furniture",
-        "rating": "4.8"
-      },
-      {
-        "name": "ZenZone Meditation Cushion Set",
-        "price": "69.99",
-        "description": "Complete meditation cushion set for serene mindfulness practices. Includes a comfortable cushion, mat, and supportive props for a peaceful meditation experience.",
-        "category": "Home and Furniture",
-        "rating": "4.4"
-      },
-      {
-        "name": "CozyNest Faux Fur Throw Blanket",
-        "price": "39.99",
-        "description": "Luxurious faux fur throw blanket for added warmth and style. Soft and cozy material, elegant design, and a perfect addition to any living space.",
-        "category": "Home and Furniture",
-        "rating": "4.7"
-      },
-      {
-        "name": "HarmonyHome Wall Art Set",
-        "price": "79.99",
-        "description": "Set of decorative wall art pieces to enhance your home decor. Intricate designs, high-quality materials, and easy installation for an artistic touch.",
-        "category": "Home and Furniture",
-        "rating": "4.5"
-      }
     ]
   }
-  

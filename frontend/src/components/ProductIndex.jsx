@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import "./ProductIndex.css"
 
 
+
 const ProductIndex = () => {
     const dispatch = useDispatch()
     const products = useSelector(selectProductsArray)
@@ -19,7 +20,7 @@ const ProductIndex = () => {
                     <li className="product-info-container" key={product.id}>
                         <div className="product-info-top">                            
                             <Link to={`/${product.id}`} > 
-                                <div className="product-img"></div>
+                                <div className="product-img"><img src={product.imgUrl} alt="" /></div>
                             </Link>
                         </div>
                         <div className="product-info-bottom">
