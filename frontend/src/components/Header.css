@@ -1,12 +1,13 @@
 .navbar-container {
-    height: 100px;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 110px;
     width: inherit;
-    min-width: 700px;
-    border: 1px dashed red
+    min-width: 800px;
 }
 
 .navbar-top {
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
     background: beige;
     display: flex;
@@ -106,9 +107,16 @@
     font-size: 40px;
 }
 
-.cart-icon {
+.cart-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 40px;
     text-decoration: none;
+    color: black;
+}
+
+.cart-icon {
     color: black;
 }
 
@@ -139,4 +147,30 @@
 .new-menu-login {
     font-weight: bold;
     color: black;
+}
+
+.navbar-bottom {
+    height: 100%;
+    width: inherit;
+    min-width: inherit;
+    background: rgb(234, 234, 208);
+}
+
+.navbar-bottom-menu {
+    display: flex;
+    height: inherit;
+    width: 50%;
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-bottom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    color: black;
+    font-size: larger;
+    white-space: nowrap;
 }

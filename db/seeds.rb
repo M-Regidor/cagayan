@@ -6,12 +6,6 @@ product = JSON.parse(product_data)
 
 
 
-
-
-
-
-
-
 Product.destroy_all
 ActiveRecord::Base.connection.execute('TRUNCATE TABLE products RESTART IDENTITY CASCADE')
 
@@ -102,6 +96,8 @@ product["health_and_beauty"].each_with_index do |item, i|
     )
   end
 end
+
+puts "all done"
 
 
 

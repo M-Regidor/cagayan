@@ -7,6 +7,7 @@ import "./Header.css"
 
 
 
+
 const Header = () => {
     const dispatch = useDispatch()
 
@@ -52,9 +53,21 @@ const Header = () => {
                             </li>
                         </ul> 
                     )}
-                    <Link onClick={e => e.preventDefault()}className="cart-icon">
-                        <FontAwesomeIcon icon={faCartShopping}/>0
-                    </Link>
+                    <div className="cart-container">
+                        <Link onClick={e => e.preventDefault()}className="cart-icon">
+                            <FontAwesomeIcon icon={faCartShopping}/>
+                        </Link>
+                        <p>0</p>
+                    </div>
+                </div>
+            </nav>
+            <nav className="navbar-bottom">
+                <div className="navbar-bottom-menu">
+                    <Link className="navbar-bottom-button" to={'/'}>All</Link>
+                    <Link className="navbar-bottom-button">Home</Link>
+                    <Link className="navbar-bottom-button">Electronics</Link>
+                    <Link className="navbar-bottom-button">Clothing</Link>
+                    <Link className="navbar-bottom-button">Health and Beauty</Link>
                 </div>
             </nav>
         </header>
