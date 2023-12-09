@@ -1,4 +1,3 @@
-require 'faker'
 require "open-uri"
 require "json"
 product_data = File.read("app/assets/seed-product-info.json")
