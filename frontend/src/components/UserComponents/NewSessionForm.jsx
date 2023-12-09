@@ -1,6 +1,6 @@
 import { useDispatch, useSelector} from "react-redux"
 import { Link, useNavigate } from "react-router-dom";
-import { loginUser } from "../store/sessionReducer";
+import { loginUser } from "../../store/sessionReducer";
 import { useEffect, useState } from "react";
 import "./NewSessionForm.css"
 
@@ -36,7 +36,7 @@ const NewSessionForm = () => {
     return (
         <div className="login-container">
             <Link className="home" to={"/"}>
-                <img className="logo"src="logo/logo.png" alt="logo" />
+                <img className="logo"src="assets/logo.png" alt="logo" />
             </Link>
             <form onSubmit={handleSubmit}>
                 <h2>Sign in</h2>

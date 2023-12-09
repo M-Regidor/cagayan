@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { createUser } from "../store/userReducer"
+import { createUser } from "../../store/userReducer"
 import "./NewUserForm.css"
 import { Link, useNavigate } from "react-router-dom"
 
@@ -55,7 +55,7 @@ const NewUserForm = () => {
     return (
         <div className="signup-container">
                 <Link className="home" to={'/'}>
-                    <img className="logo"src="logo/logo.png" alt="logo" />
+                    <img className="logo"src="assets/logo.png" alt="logo" />
                 </Link>
             <div className="signup-form">
                 <form onSubmit={handleSubmit}>

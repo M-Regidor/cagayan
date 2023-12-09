@@ -22,7 +22,7 @@ const Header = () => {
             <nav className="navbar-top">
                 <div className="navbar-top-left">
                     <Link className="home" to={"/"}>
-                        <img className="logo"src="/logo/logo.png" alt="logo" />
+                        <img className="logo"src="/assets/logo.png" alt="logo" />
                     </Link>
                 </div>
 
@@ -46,9 +46,9 @@ const Header = () => {
                     ): (
                         <ul className="new-menu">              
                             <li>
-                                <Link className="new-menu-login" to={"login"}>Login</Link>
+                                <Link className="new-menu-login" to={"/login"}>Login</Link>
                                 <div>
-                                    <p>{"Don't have an account?"} <Link to={"signup"}>Start here</Link></p>
+                                    <p>{"Don't have an account?"} <Link to={"/signup"}>Start here</Link></p>
                                 </div>
                             </li>
                         </ul> 
@@ -63,7 +63,7 @@ const Header = () => {
             </nav>
             <nav className="navbar-bottom">
                 <div className="navbar-bottom-menu">
-                    <Link className="navbar-bottom-button" to={'/'}>All</Link>
+                    <Link className="navbar-bottom-button" to={'/products'}>All</Link>
                     <Link className="navbar-bottom-button">Home</Link>
                     <Link className="navbar-bottom-button">Electronics</Link>
                     <Link className="navbar-bottom-button">Clothing</Link>

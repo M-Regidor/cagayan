@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { fetchProducts, selectProductsArray } from "../store/productReducer"
+import { fetchProducts, selectProductsArray } from "../../store/productReducer"
 import { useEffect } from "react"
 import "./ProductIndex.css"
 import ProductIndexItem from "./ProductIndexItem"
