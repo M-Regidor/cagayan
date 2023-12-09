@@ -4,13 +4,11 @@ const ProductIndexItem = ({product}) => {
 
     return (
         <li className="product-info-container" key={product.id}>
-            <div className="product-info-top">                            
-                <Link to={`products/${product.id}`} > 
-                    <div className="product-img"><img src={product.imgUrls} alt="" /></div>
-                </Link>
-            </div>
+            <Link to={`/products/${product.id}`} className="product-info-top">                            
+                <img src={product.imgUrls} alt="" />
+            </Link>
             <div className="product-info-bottom">
-                <div className="product-name"><Link to={`products/${product.id}`}>{product.name}</Link></div>
+                <Link className="product-title" to={`/products/${product.id}`}>{product.name}</Link>
                 <div className="product-category">{product.category}</div>
                 <div className="product-rating">Rating: {product.rating}</div> 
                 <div className="product-price">${product.price}</div>

@@ -12,9 +12,13 @@
 }
 
 .product-img {
+    width: inherit;
     height: 100%;
-    width: 100%;
-    background: pink;
+    /* background: pink; */
+}
+
+.product-title {
+    color: black;
 }
 
 .product-info-bottom {
@@ -26,7 +30,7 @@
     font-size: 20px;
 }
 
-.product-img img {
-    height: inherit;
+.product-info-top img {
+    height: 100%;
     width: inherit;
 }

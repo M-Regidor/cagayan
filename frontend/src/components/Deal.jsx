@@ -7,17 +7,19 @@ import { useEffect } from "react"
 
 const DealComponent = ({deal}) => {
     const dispatch = useDispatch()
-    const productId = {
+    const dealId = {
         "Hot Deals": 1,
         "You might like": 5,
         "Save on": 6,
         "Trending": 20
     }
-    const product = useSelector(selectProduct(productId[deal]))
+    const productId = dealId[deal]
+    
+    const product = useSelector(selectProduct(productId))
 
     useEffect(()=>{
-        dispatch(fetchProduct(productId[deal]))
-    },[dispatch, productId[deal]])
+        dispatch(fetchProduct(productId))
+    },[dispatch, productId, deal])
 
     if (product){
         return (
