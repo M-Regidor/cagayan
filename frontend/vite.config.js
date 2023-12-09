@@ -15,7 +15,14 @@ export default defineConfig(({ mode }) => ({
   // uncomment the following lines:
   server: {
     proxy: {
-      '/api': 'http://localhost:5000'
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      "/rails": {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
     }
   },
   build: {

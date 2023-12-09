@@ -1,0 +1,43 @@
+.landing-container {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    min-width: 700px;
+    padding: 0;
+    margin: 0;
+}
+
+.landing-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1300px;
+    min-width: 700px;
+    height: inherit;
+    padding: 0;
+}
+
+.landing-ad {
+    width: inherit;
+    height: 260px;
+}
+
+.landing-ad-img {
+    position: relative;
+    width: inherit;
+    border: none;
+
+}
+
+.landing-deals-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 15px;
+    width: inherit;
+    height: 100%;
+}
+
+

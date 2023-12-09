@@ -1,0 +1,150 @@
+{
+    "home": [
+      {
+        "name": "Chef's Choice Premium Stainless Steel Cookware Set",
+        "price": "149.99",
+        "description": "High-quality stainless steel cookware set featuring a variety of pots and pans. Durable, non-reactive, and suitable for a wide range of cooking styles.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.8"
+      },
+      {
+        "name": "SmoothBlend Max Power Blender",
+        "price": "89.99",
+        "description": "Powerful blender with multiple speed settings for smoothies, soups, and more. Durable blades and a sleek design make it a versatile and stylish kitchen accessory.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.2"
+      },
+      {
+        "name": "QuickHeat Pro Microwave Oven",
+        "price": "129.99",
+        "description": "The QuickHeat Pro Microwave Oven offers fast, efficient cooking with advanced heating tech, multiple power levels, and a spacious interior. Its sleek design and user-friendly interface make it a perfect addition to any kitchen.",
+        "category": "Home and Kitchen Appliances",
+        "rating": "4.8"
+      },
+      {
+        "name": "DreamComfort Luxe Bedding Collection",
+        "price": "129.99",
+        "description": "Luxurious bedding set with a soft and comfortable feel. Includes a fitted sheet, flat sheet, pillowcases, and a stylish duvet cover for a complete bedroom upgrade.",
+        "category": "Home and Furniture",
+        "rating": "4.7"
+      },
+      {
+        "name": "Stellar Sip Ceramic Coffee Mug",
+        "price": "3.54",
+        "description": "High-quality ceramic construction for durability. Generous 14-ounce capacity for ample beverage enjoyment. Comfortable C-shaped handle for a secure grip. Smooth glazed finish for easy cleaning. Double-walled insulation for prolonged temperature retention.",
+        "category": "Home and Furniture",
+        "rating": "3.7"
+      }
+    ],
+    "electronics": [
+      {
+        "name": "TechMaster Pro Smartphone",
+        "price": "699.99",
+        "description": "Flagship smartphone with advanced features, high-resolution camera, and a sleek design. Perfect for productivity and entertainment on the go.",
+        "category": "Electronics",
+        "rating": "4.9"
+      },
+      {
+        "name": "UltraVision 4K Smart TV",
+        "price": "899.99",
+        "description": "Immersive 4K smart TV with a large screen, vivid colors, and smart connectivity. Elevate your home entertainment experience with this top-tier television.",
+        "category": "Electronics",
+        "rating": "4.8"
+      },
+      {
+        "name": "SoundWave Pro Wireless Earbuds",
+        "price": "129.99",
+        "description": "Premium wireless earbuds with noise cancellation, high-fidelity sound, and a comfortable fit. Ideal for music lovers and on-the-go professionals.",
+        "category": "Electronics",
+        "rating": "4.5"
+      },
+      {
+        "name": "GamerXtreme Gaming Laptop",
+        "price": "1499.99",
+        "description": "High-performance gaming laptop with cutting-edge graphics, fast processors, and a customizable RGB keyboard. Dominate the gaming world with this powerhouse.",
+        "category": "Electronics",
+        "rating": "4.7"
+      },
+      {
+        "name": "SmartHome Hub and Speaker",
+        "price": "199.99",
+        "description": "Central hub for smart home control with integrated voice-activated speaker. Streamline your smart home devices and enjoy voice-controlled convenience.",
+        "category": "Electronics",
+        "rating": "4.6"
+      }
+    ],
+    "clothing": [
+      {
+        "name": "Stylish Denim Jacket",
+        "price": "59.99",
+        "description": "Classic denim jacket with a modern twist. Features distressed details, a comfortable fit, and versatile styling options for a trendy look.",
+        "category": "Clothing and Fashion",
+        "rating": "4.3"
+      },
+      {
+        "name": "CozyComfort Hooded Sweatshirt",
+        "price": "49.99",
+        "description": "Stay warm and stylish with our CozyComfort Hooded Sweatshirt. Made from high-quality cotton blend material, this sweatshirt provides ultimate comfort. The hood and front pocket add a practical touch, while the modern design ensures you look good wherever you go.",
+        "category": "Clothing",
+        "rating": "4.7"
+      },
+      {
+        "name": "ActiveFit Performance Leggings",
+        "price": "39.99",
+        "description": "High-performance leggings for active lifestyles. Moisture-wicking fabric, breathable design, and a comfortable fit for workouts and everyday wear.",
+        "category": "Clothing and Fashion",
+        "rating": "4.5"
+      },
+      {
+        "name": "Classic Leather Handbag",
+        "price": "89.99",
+        "description": "Timeless leather handbag with a chic design. Spacious interior, durable construction, and versatile styling make it a must-have accessory.",
+        "category": "Clothing and Fashion",
+        "rating": "4.6"
+      },
+      {
+        "name": "Casual Weekend Tee",
+        "price": "19.99",
+        "description": "Comfortable and stylish tee for casual weekends. Soft cotton fabric, relaxed fit, and a variety of colors for effortless and laid-back style.",
+        "category": "Clothing and Fashion",
+        "rating": "4.2"
+      }
+    ],
+    "health_and_beauty": [
+      {
+        "name": "GlowGlam Skincare Bundle",
+        "price": "79.99",
+        "description": "Radiant complexion with cleanser, toner, moisturizer, and face mask. Natural ingredients for a spa-like experience.",
+        "category": "Health and Beauty",
+        "rating": "4.6"
+      },
+      {
+        "name": "Revitalize Pro Hair Dryer",
+        "price": "49.99",
+        "description": "Salon-quality results with multiple settings, concentrator nozzle, and sleek design.",
+        "category": "Health and Beauty",
+        "rating": "4.5"
+      },
+      {
+        "name": "VitaBoost Daily Multivitamin",
+        "price": "24.99",
+        "description": "Comprehensive support for health and well-being. Essential vitamins, immune support, energy production, and healthy skin.",
+        "category": "Health and Wellness",
+        "rating": "4.9"
+      },
+      {
+        "name": "Serenity Aromatherapy Diffuser",
+        "price": "34.99",
+        "description": "Calming atmosphere with ultrasonic tech, LED lights, and automatic shut-off.",
+        "category": "Health and Beauty",
+        "rating": "4.8"
+      },
+      {
+        "name": "FitFuel Pro Blender Bottle",
+        "price": "14.99",
+        "description": "Convenient shakes and smoothies with mixing ball, leak-proof design, and easy carry.",
+        "category": "Health and Beauty",
+        "rating": "4.0"
+      }
+    ]    
+  }

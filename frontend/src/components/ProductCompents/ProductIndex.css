@@ -1,0 +1,20 @@
+.product-background {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    min-width: 700px;
+    padding: 0;
+    margin: 0;
+}
+
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 0;
+    min-width: 805px;
+    max-width: 1050px;
+    gap: 10px;
+}

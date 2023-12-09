@@ -1,0 +1,31 @@
+.deal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(249, 245, 245);
+    height: 400px;
+    width: 275px;
+    padding: 15px;
+}
+
+.deal-container h3 {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.deal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+    color: black;
+    height: 85%;
+    gap: 5px;
+    margin: 0;
+}
+
+.deal-info img {
+    height: 80%;
+}

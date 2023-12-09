@@ -2,11 +2,13 @@ import {legacy_createStore, applyMiddleware, compose, combineReducers} from "red
 import thunk from "redux-thunk"
 import userReducer from "./userReducer";
 import sessionReducer from "./sessionReducer";
+import productReducer from "./productReducer";
 
 
 const rootReducer = combineReducers({
     users: userReducer,
-    session: sessionReducer
+    session: sessionReducer,
+    products: productReducer
 });
 
 let enhancer;

@@ -1,6 +1,13 @@
-
-.header {
+.navbar-container {
     font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    width: inherit;
+    min-width: 800px;
+}
+
+.navbar-top {
     font-size: 20px;
     background: beige;
     display: flex;
@@ -8,15 +15,60 @@
     align-items: center;
     height: 70px;
     padding-left: 10px;
-    padding-right: 15px;
+    padding-right: 30px;
 }
 
-.header-options{
+.navbar-top-middle {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-top-right{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: inherit;
+    width: 20%;
+    gap: 25px;
 }
 
+/* search bar */
+.navbar-top-middle form{
+    height: 40px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar-top-middle form input {
+    height: 95%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    margin: 0;
+}
+
+.navbar-top-middle form input:focus {
+    outline: none;
+}
+
+.navbar-top-middle form button {
+    height: inherit;
+    width: 50px;
+    border: none;
+    border-radius: 7px;
+    margin-right: 5px;
+    margin: 0;
+    background-color: rgb(175, 167, 167);
+    cursor: pointer;
+    
+}
 
 
 .user {
@@ -29,49 +81,55 @@
     cursor: pointer;    
 }
 
-.user-icon{
-    font-size: 35px;
-}
 
-.user a {
-    text-decoration: none;
-}
 
 .user:hover {
     background: rgb(207, 207, 185);
 }
 
+/* User drop down */
 .user-menu {
     display: none;
-}
-
-
-.user:hover .user-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+    border: 1px solid black;
     background-color: beige;
     border-radius: 3px;
     padding-right: 10px;
     padding-left: 10px;
-    right: 17px;
-}
-
-.user:hover .user-menu a {
-    display: block;
-    color: black;
     
 }
 
-.new-menu {
-    list-style: none;
-    padding: 0;
-    font-size: 30px;
+.user-menu a {
+    text-decoration: none;
+    color: black;
 }
 
-.new-menu a{
+.user-icon{
+    font-size: 40px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 40px;
     text-decoration: none;
+    color: black;
+}
+
+.cart-icon {
+    color: black;
+}
+
+
+.user:hover .user-menu {
+    display: block;
+    position: absolute;
+}
+
+
+/* user sign up */
+.new-menu {
+    padding: 0;
 }
 
 .new-menu div {
@@ -79,9 +137,40 @@
 }
 
 .new-menu:hover li div {
-    display: flex;
+    display: block;
     position: absolute;
-    right: 10px;
     font-size: 15px;
     padding-bottom: 2px;
+}
+
+/* login link */
+.new-menu-login {
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-bottom {
+    height: 100%;
+    width: inherit;
+    min-width: inherit;
+    background: rgb(234, 234, 208);
+}
+
+.navbar-bottom-menu {
+    display: flex;
+    height: inherit;
+    width: 50%;
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-bottom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    color: black;
+    font-size: larger;
+    white-space: nowrap;
 }

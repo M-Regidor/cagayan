@@ -25,8 +25,8 @@ const initializeApp = () => {
         }
       }
     }
-  
-  
+    
+
     const store = configureStore(initialState)
 
     if (import.meta.env.MODE !== 'production') {
@@ -41,7 +41,6 @@ const initializeApp = () => {
       </React.StrictMode>
     );
 }
-
 
 
 restoreSession().then(initializeApp)

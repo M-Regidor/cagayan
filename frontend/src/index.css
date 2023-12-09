@@ -1,11 +1,19 @@
 /* TODO: Add sitewide styles */
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .home {
     height: inherit;
-    width: 180px;
+    width: 170px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 .logo {
