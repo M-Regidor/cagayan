@@ -1,5 +1,5 @@
-require "open-uri"
 require "json"
+
 product_data = File.read("app/assets/seed-product-info.json")
 product = JSON.parse(product_data)
 
@@ -24,12 +24,6 @@ product["home"].each do |item|
 
     aws_link = new_item.name.split.join("+")
 
-    (1..3).each do |i|
-      new_item.images.attach(
-        io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/home/#{aws_link}/#{aws_link}-#{i}.jpg"),
-        filename: "#{new_item.name}-#{i}"
-      )
-    end
 end
 
 puts "seeding electronics products..."
@@ -44,13 +38,6 @@ product["electronics"].each do |item|
 
   aws_link = new_item.name.split.join("+")
 
-
-  (1..3).each do |i|
-    new_item.images.attach(
-      io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/electronics/#{aws_link}/#{aws_link}-#{i}.png"),
-      filename: "#{new_item.name}-#{i}"
-    )
-  end
 end
 
 
@@ -67,12 +54,6 @@ product["clothing"].each do |item|
 
   aws_link = new_item.name.split.join("+")
 
-  (1..3).each do |i|
-    Product.last.images.attach(
-      io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/clothing/#{aws_link}/#{aws_link}-#{i}.png"),
-      filename: "#{new_item.name}-#{i}"
-    )
-  end
 end
 
 
@@ -88,12 +69,10 @@ product["health_and_beauty"].each_with_index do |item, i|
 
   aws_link = new_item.name.split.join("+")
 
-  (1..3).each do |i|
-    Product.last.images.attach(
-      io: URI.open("https://cagayan-seeds.s3.us-west-1.amazonaws.com/health_and_beauty/#{aws_link}/#{aws_link}-#{i}.png"),
-      filename: "#{new_item.name}-#{i}"
-    )
-  end
 end
+
+
+
+Review.create(body:"This cookware set exceeded my expectations! The durable non-stick coating makes cooking and cleaning a breeze. The stylish design adds a touch of elegance to my kitchen. I appreciate the even heat distribution and sturdy build. A fantastic investment for any home chef!", rating: 3.8, author_id: 1, product_id: 1)
 
 puts "all done"

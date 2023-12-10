@@ -32,7 +32,8 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :reviews,
-  dependent: :destroy
+    foreign_key: :author_id,
+    dependent: :destroy
 
   has_many :reviewed_products,
   through: :reviews,
