@@ -2,9 +2,10 @@ import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home';
 import NewUserForm from './components/UserComponents/NewUserForm';
 import NewSessionForm from './components/UserComponents/NewSessionForm';
-import ProductIndex from './components/ProductCompents/ProductIndex';
-import ProductShow from './components/ProductCompents/ProductShow';
-import ProductHome from './components/ProductCompents/ProductHome';
+import ProductIndex from './components/ProductComponents/ProductIndex';
+import ProductShow from './components/ProductComponents/ProductShow';
+import ProductHome from './components/ProductComponents/ProductHome';
+import ReviewForm from './components/ReviewComponents/ReviewForm';
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         {
           path: ":productId",
           element: <ProductShow/>
+        },
+        {
+          path: ":productId/create-review",
+          element: <ReviewForm/>
         }
     ]
   },

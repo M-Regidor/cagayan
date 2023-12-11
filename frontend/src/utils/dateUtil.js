@@ -28,7 +28,7 @@ export const formatDate = date => {
   const month = months[obj.getMonth()];
   const day = obj.getDate();
   const year = obj.getFullYear();
-  const dayOfWeek = daysOfWeek[obj.getDay()];
+  // const dayOfWeek = daysOfWeek[obj.getDay()];
   return `${month} ${day}, ${year}`;
 };
 
@@ -47,3 +47,19 @@ export const formatTime = date => {
 export const formatDateTime = date => (
   `${formatDate(date)} ${formatTime(date)}`
 );
+
+export const camelToSnake = (obj) => {
+  if (obj === null || typeof obj !== 'object') {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map(camelToSnake);
+  }
+
+  return Object.keys(obj).reduce((acc, key) => {
+    const snakeKey = key.replace(/([A-Z])/g, "_$1").toLowerCase();
+    acc[snakeKey] = camelToSnake(obj[key]);
+    return acc;
+  }, {});
+}

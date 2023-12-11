@@ -1,9 +1,3 @@
-.review-details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .review-details-author{
     display: flex;
     align-items: center;

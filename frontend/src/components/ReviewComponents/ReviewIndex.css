@@ -1,0 +1,10 @@
+.review-details {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    gap: 40px;
+}
+
+.review-container {
+    display: flex;
+}

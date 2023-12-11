@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { fetchProduct, selectProduct } from "../../store/productReducer"
 import "./ProductShow.css"
-import ReviewIndex from "../ReviewComopents/ReviewIndex"
+import ReviewIndex from "../ReviewComponents/ReviewIndex"
+
 
 
 

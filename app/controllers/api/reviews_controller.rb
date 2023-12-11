@@ -1,4 +1,7 @@
 class Api::ReviewsController < ApplicationController
+
+  before_action :snake_case_params, :review_params
+  
   def index
     product = Product.find_by(id: params[:product_id])
     @reviews = product.reviews
@@ -12,7 +15,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.product_id = params[:product_id]
-    if @review
+    if @review.save
       render :create
     else
       render json: @review.errors, status: 422
@@ -21,6 +24,6 @@ class Api::ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:title, :body, :rating, :author_id)
+    params.require(:review).permit(:title, :body, :rating, :author_id, :author_name)
   end
 end

@@ -1,0 +1,17 @@
+.create-review-container {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.create-review-product-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.create-review-product-details img{
+    height: 60px;
+}
