@@ -39,7 +39,7 @@ const Header = () => {
                                 <li className="user-icon"></li>                 
                                 <li><FontAwesomeIcon icon={faUser}/>Hello,<br/> {currentUser.name}
                                     <div className="user-menu">
-                                        <Link onClick={()=> dispatch(logoutUser(currentUser.id))}>Logout</Link>
+                                        <Link onClick={() => dispatch(logoutUser(currentUser.id))}>Logout</Link>
                                     </div>
                                 </li>
                             </ul> 

@@ -13,7 +13,7 @@
 #  updated_at  :datetime         not null
 #
 class Review < ApplicationRecord
-  validates :rating, presence: true, numericality: { less_than_or_equal_to: 5 }
+  validates :rating, numericality: { less_than_or_equal_to: 5, message: "can't not be blank"}
   validates :title, length: {in: 3..50}
   validates :body, length: {in: 10..1000}
   validates :author_id, :product_id, presence: true

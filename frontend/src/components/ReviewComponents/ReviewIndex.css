@@ -5,6 +5,14 @@
     gap: 40px;
 }
 
+.review-details button {
+    width: 75px;
+    height: 25px;
+    border-radius: 10px;
+    border: .5px;
+}
+
 .review-container {
     display: flex;
+    padding-left: 50px;
 }

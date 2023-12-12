@@ -2,9 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { formatDate } from "../../utils/dateUtil"
 import "./ReviewIndexItem.css"
+import { useDispatch } from 'react-redux'
+import { userReviewDelete } from '../../store/reviewReducer'
+import { useNavigate } from 'react-router-dom'
 
 
-const ReviewIndexItem = ({review}) => {
+const ReviewIndexItem = ({review, currentUser}) => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return (
         <li key={review.id}>
@@ -15,7 +20,14 @@ const ReviewIndexItem = ({review}) => {
             <p>Rating: {review.rating} {review.title}</p>
             <p>Reviewed on {formatDate(review.createdAt)}</p>
             <p>{review.body}</p>
-        <button>Helpful</button>
+        {currentUser? (
+            <div>
+                <button onClick={()=> dispatch(userReviewDelete(review))}>Delete</button>
+                <button onClick={() => navigate(`/products/${review.productId}/edit-review/${review.id}`)}>Edit</button>
+            </div>
+        ):(
+            <button>Helpful</button>
+        )}
     </li> 
     )
 }

@@ -42,6 +42,7 @@ const ReviewIndex = ({productId}) => {
                     <ReviewIndexItem
                         key={review.id}
                         review={review}
+                        currentUser={currentUser}
                     />    
                 )}
             </ul>

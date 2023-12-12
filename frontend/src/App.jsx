@@ -9,6 +9,7 @@ import ReviewForm from './components/ReviewComponents/ReviewForm';
 
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         },
         {
           path: ":productId/create-review",
+          element: <ReviewForm/>
+        },
+        {
+          path: ":productId/edit-review/:reviewId",
           element: <ReviewForm/>
         }
     ]
