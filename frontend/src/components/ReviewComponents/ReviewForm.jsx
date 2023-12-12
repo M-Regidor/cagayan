@@ -93,8 +93,8 @@ const ReviewForm = () => {
             rating, 
             body,
             title,
-            authorName,
-            authorId
+            author_name: authorName,
+            author_id: authorId
         }
         console.log(review)
  
@@ -180,11 +180,7 @@ const ReviewForm = () => {
                             </label>
                                 {handleError("title")}
                             <label>
-                                {formType === "Edit Review" ? (
-                                    <h3>Edit written review</h3>
-                                ):(
-                                    <h3>Add written review</h3>
-                                )}
+                            <h3>{formType === "Edit Review" ? "Edit written review" : "Add written review"}</h3>
                                 <textarea className="create-body-input"
                                 value={body}
                                 onChange={e => setBody(e.target.value)}

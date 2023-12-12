@@ -8,3 +8,17 @@
 .review-author-icon {
     font-size: 30px;
 }
+
+.review-item-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.review-item-buttons button {
+    border-radius: 10px;
+    border: 1px;
+    height: 35px;
+    width: 80px;
+    cursor: pointer;
+}
+

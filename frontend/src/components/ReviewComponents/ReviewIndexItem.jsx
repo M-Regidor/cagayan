@@ -20,14 +20,16 @@ const ReviewIndexItem = ({review, currentUser}) => {
             <p>Rating: {review.rating} {review.title}</p>
             <p>Reviewed on {formatDate(review.createdAt)}</p>
             <p>{review.body}</p>
-        {currentUser? (
-            <div>
-                <button onClick={()=> dispatch(userReviewDelete(review))}>Delete</button>
-                <button onClick={() => navigate(`/products/${review.productId}/edit-review/${review.id}`)}>Edit</button>
+            <div className='review-item-buttons'>
+                {currentUser? (
+                    <>
+                        <button onClick={()=> dispatch(userReviewDelete(review))}>Delete</button>
+                        <button onClick={() => navigate(`/products/${review.productId}/edit-review/${review.id}`)}>Edit</button>
+                    </>
+                ):(
+                    <button>Helpful</button>
+                    )}
             </div>
-        ):(
-            <button>Helpful</button>
-        )}
     </li> 
     )
 }
