@@ -66,4 +66,4 @@ yarn-debug.log*
 
 !/public
 
-app/assets/product-images
+public/assets/product-images

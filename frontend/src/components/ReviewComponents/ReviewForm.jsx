@@ -52,7 +52,6 @@ const ReviewForm = () => {
     const [body, setBody] = useState(review.body)
     const [title, setTitle] = useState(review.title)
     const [authorName, setAuthorName] = useState(review.authorName)
-    const [authorId, setAuthorId] = useState(review.authorId)
     const [errors, setErrors] = useState({})
 
     const handleError = field => {
@@ -94,7 +93,6 @@ const ReviewForm = () => {
             body,
             title,
             author_name: authorName,
-            author_id: authorId
         }
         console.log(review)
  
