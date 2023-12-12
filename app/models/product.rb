@@ -21,4 +21,13 @@ class Product < ApplicationRecord
   validates :category, presence: true
 
   has_many_attached :images
+
+  has_many :reviews,
+  dependent: :destroy
+
+  has_many :user_reviews,
+  through: :reviews,
+  source: :user
+
+
 end

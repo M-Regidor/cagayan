@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { fetchProduct, selectProduct } from "../../store/productReducer"
 import "./ProductShow.css"
+import ReviewIndex from "../ReviewComponents/ReviewIndex"
+
 
 
 
@@ -11,14 +13,11 @@ const ProductShow = () => {
     const {productId} = useParams()
     const product = useSelector(selectProduct(productId))
 
-    let imgMain;
-    if (product) imgMain = product.imgUrls[0]
 
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
     },[dispatch, productId])
-
     
     if (product){
         return (
@@ -29,10 +28,10 @@ const ProductShow = () => {
                 <div className="show-details-container">
                     <div className="show-details-left">
                         <div className="show-img-container">
-                            <div className="show-img-main"><img src={imgMain} alt="" /> </div>
+                            <div className="show-img-main"><img src={product.imgUrls[0]} alt="" /> </div>
                             <div className="show-img-sub-container">
                                 <div className="show-img-sub">
-                                    <img onClick={()=> console.log("hi")} src={product.imgUrls[0]} alt="" />
+                                    <img src={product.imgUrls[0]} alt="" />
                                 </div>
                                 <div className="show-img-sub">
                                     <img src={product.imgUrls[1]} alt="" />
@@ -67,6 +66,9 @@ const ProductShow = () => {
                             <div className="show-buy-menu-sub"></div>
                         </div>
                     </div>
+                </div>
+                <div className="show-reviews-container">
+                    <ReviewIndex productId={product.id}/>
                 </div>
             </div>
         )

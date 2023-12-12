@@ -1,16 +1,22 @@
 json.extract! @product, :id, :name, :price, :description, :rating, :category
 
-# json.imgUrls do
-#   @product.image.each_with_index do |img, idx|
-#     json.set! idx do
-#       json.url url_for(img)
-#     end
-#   end
-# end
+if @product.images.attached?
+  json.imgUrls  @product.images.map {|img| url_for(img)}
+else
+  dir_path = "frontend/public/assets/product-images/#{@product.name}"
+  if File.directory?(dir_path)
+    files = Dir.entries(dir_path).select { |file| File.file?(File.join(dir_path, file)) }
 
-json.imgUrls  @product.images.map {|img| url_for(img)}
+    file_paths = []
 
+    files.each do |file|
+      file_path = File.join(dir_path, file)
 
-# json.imgUrl1 @product.image.attached? ? url_for(@product.image) : nil
-# json.imgUrl2 @product.image.attached? ? url_for(@product.image) : nil
-# json.imgUrl3 @product.image.attached? ? url_for(@product.image) : nil
+      file_paths << file_path.to_s[15..-1]
+    end
+
+    json.imgUrls file_paths
+  else
+    json.imgUrls []
+  end
+end

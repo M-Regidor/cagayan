@@ -1,0 +1,24 @@
+.review-details-author{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 10px;
+}
+
+.review-author-icon {
+    font-size: 30px;
+}
+
+.review-item-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.review-item-buttons button {
+    border-radius: 10px;
+    border: 1px;
+    height: 35px;
+    width: 80px;
+    cursor: pointer;
+}
+

@@ -31,6 +31,14 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  has_many :reviews,
+    foreign_key: :author_id,
+    dependent: :destroy
+
+  has_many :reviewed_products,
+  through: :reviews,
+  source: :product
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     if user&.authenticate(password)
