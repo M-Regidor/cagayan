@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
 
-  before_action :snake_case_params, only: [:create]
+  before_action :snake_case_params
 
   def index
     product = Product.find_by(id: params[:product_id])

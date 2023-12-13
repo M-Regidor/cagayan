@@ -31,7 +31,7 @@ const ReviewForm = () => {
             productId,
         }
     }
-    // console.log(review)
+
 
     useEffect(()=>{
         if (!currentUser) {
@@ -94,20 +94,18 @@ const ReviewForm = () => {
             title,
             author_name: authorName,
         }
-        console.log(review)
+
  
         if (formType === "Create Review"){
             dispatch(createReview(review)).then(() => {
                 navigate(`/products/${productId}`);
             }).catch(msg => {
-                console.log(msg)
                 setErrors(msg);
             });
         } else {
             dispatch(editReview(review)).then(() => {
                 navigate(`/products/${productId}`);
             }).catch(msg => {
-                console.log(msg)
                 setErrors(msg);
             });
         }

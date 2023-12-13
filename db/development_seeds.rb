@@ -20,7 +20,6 @@ product["home"].each do |item|
       name: item["name"],
       price: item["price"],
       description: item["description"],
-      rating: item["rating"],
       category: item["category"]
       )
 end
@@ -31,7 +30,6 @@ product["electronics"].each do |item|
     name: item["name"],
     price: item["price"],
     description: item["description"],
-    rating: item["rating"],
     category: item["category"]
     )
 end
@@ -43,7 +41,6 @@ product["clothing"].each do |item|
     name: item["name"],
     price: item["price"],
     description: item["description"],
-    rating: item["rating"],
     category: item["category"]
     )
 end
@@ -55,7 +52,6 @@ product["health_and_beauty"].each_with_index do |item, i|
     name: item["name"],
     price: item["price"],
     description: item["description"],
-    rating: item["rating"],
     category: item["category"]
     )
 

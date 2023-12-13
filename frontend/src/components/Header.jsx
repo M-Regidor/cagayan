@@ -12,7 +12,7 @@ import { useEffect } from "react"
 const Header = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector(selectCartItemsArray)
-    const cartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    let cartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
 
     
@@ -20,10 +20,14 @@ const Header = () => {
         const id = state.session.currentUserId;
         return state.users[id]
     })
+
+    if (!currentUser) cartQuantity = 0
     
     useEffect(()=> {
-        dispatch(fetchCartItems(currentUser.id))
-    },[dispatch, currentUser.id])
+        if (currentUser) {
+            dispatch(fetchCartItems(currentUser.id))
+        }
+    },[dispatch, currentUser])
 
     return (
         <header className="navbar-container">
