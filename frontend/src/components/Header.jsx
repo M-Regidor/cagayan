@@ -4,18 +4,26 @@ import { logoutUser } from "../store/sessionReducer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
-
+import { fetchCartItems, selectCartItemsArray } from "../store/cartItem.Reducer"
+import { useEffect } from "react"
 
 
 
 const Header = () => {
     const dispatch = useDispatch()
+    const cartItems = useSelector(selectCartItemsArray)
+    const cartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
+
+    
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
         return state.users[id]
     })
-
+    
+    useEffect(()=> {
+        dispatch(fetchCartItems(currentUser.id))
+    },[dispatch, currentUser.id])
 
     return (
         <header className="navbar-container">
@@ -57,7 +65,7 @@ const Header = () => {
                         <Link to={"/cart"} className="cart-icon">
                             <FontAwesomeIcon icon={faCartShopping}/>
                         </Link>
-                        <p>0</p>
+                        <p>{cartQuantity}</p>
                     </div>
                 </div>
             </nav>

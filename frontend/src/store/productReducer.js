@@ -48,6 +48,7 @@ export const fetchProduct = productId => async (dispatch) => {
 export const selectProducts = state => state.products
 export const selectProduct = productId => state => state.products[productId]
 
+
 export const selectProductsArray = createSelector(selectProducts, product => 
     Object.values(product)
 );

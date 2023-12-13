@@ -16,3 +16,9 @@ export const deleteCartItem = cartItemId => (
         method: "DELETE"
     })
 )
+
+export const destroyUserCart = userId => (
+    crsfFetch(`/api/users/${userId}/cart_items/checkout`,{
+        method: "DELETE"
+    })
+)

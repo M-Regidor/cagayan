@@ -1,9 +1,10 @@
 import { createSelector } from "reselect"
-import { deleteCartItem, getCartItems, postCartItem } from "../utils/cartItem_api_util"
+import { deleteCartItem, destroyUserCart, getCartItems, postCartItem } from "../utils/cartItem_api_util"
 
 export const RECEIVE_CARTITEM = "RECEIVE_CARTITEM"
 export const RECEIVE_CARTITEMS = "RECEIVE_CARTITEMS"
 export const REMOVE_CARTITEM = "REMOVE_CARTITEM"
+export const REMOVE_ALL_CARTITEMS = "REMOVE_ALL_CARTITEMS"
 
 export const receiveCartItem = cartItem => ({
     type: RECEIVE_CARTITEM,
@@ -18,6 +19,11 @@ export const receiveCartItems = cartItems => ({
 export const removeCartItem = cartItemId => ({
     type: REMOVE_CARTITEM,
     cartItemId
+})
+
+export const removeAllCartItems = (emptyCart = {}) => ({
+    type: REMOVE_ALL_CARTITEMS,
+    emptyCart
 })
 
 export const fetchCartItems = (userId) => async(dispatch) => {
@@ -51,9 +57,18 @@ export const removeItem = cartItemId => async(dispatch) => {
 
     if (res.ok) {
         dispatch(removeCartItem(cartItemId))
-    } else (
-        console.log("something went wrong")
-    )
+    } else {
+        data = res.json()
+        console.log(data)
+    }
+}
+
+export const checkoutUser = userId => async(dispatch) => {
+    const res = await destroyUserCart(userId)
+    
+    if (res.ok){
+        dispatch(removeAllCartItems())
+    }
 }
 
 
@@ -78,6 +93,8 @@ const cartItemsReducer = (state = {}, action) => {
         case REMOVE_CARTITEM:
             delete newState[action.cartItemId]
             return newState
+        case REMOVE_ALL_CARTITEMS:
+            return action.emptyCart
         default:
             return state
     }

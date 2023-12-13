@@ -3,10 +3,30 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    min-width: 1200px;
+    margin-top: 50px;
 }
 
 .cart-total {
-    border: 1px dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 225px;
     height: 200px;
+    margin-top: 85px;
+}
+
+.cart-total button {
+    font-size: 14px;
+    background: #ffff00;
+    padding: 8px;
+    border-radius: 10px;
+    width: 190px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.cart-total button:hover {
+    background: #e0e031;
 }

@@ -20,7 +20,7 @@ const CartItemIndexItem = ({cartItem}) => {
             <div className="cart-item-details">
                 <h2>{product.name}</h2>
                 <div className="cart-item-menu">
-                    <label>QTY:</label>
+                    <label>QTY: {cartItem.quantity}</label>
                         <select id="quantity" name="quantity">
                             {/* <option value="1">{"0 (delete)"}</option> */}
                             <option value="1">1</option>

@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json} do
     resources :users, only: [:create] do
-            resources :cart_items, only:[:index]
+            resources :cart_items, only:[:index] do
+                delete 'checkout', on: :collection, to: 'cart_items#checkout'
+            end
     end
     resource :session, only: [:show, :create, :destroy]
     resources :products, only: [:index, :show] do
