@@ -25,9 +25,11 @@ class Product < ApplicationRecord
   has_many :reviews,
   dependent: :destroy
 
+
   has_many :user_reviews,
   through: :reviews,
   source: :user
 
+  has_many :cart_items
 
 end
