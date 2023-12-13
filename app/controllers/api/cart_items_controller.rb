@@ -16,6 +16,13 @@ class Api::CartItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @cart_item = CartItem.find_by(id: params[:id])
+    if @cart_item.destroy
+      head :no_content
+    end
+  end
+
   private
   def cart_params
     params.require(:cart_item).permit(:product_id, :user_id, :quantity)

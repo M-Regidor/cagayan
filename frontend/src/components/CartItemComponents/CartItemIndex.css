@@ -1,0 +1,12 @@
+.cart-index-container {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.cart-total {
+    border: 1px dashed;
+    width: 225px;
+    height: 200px;
+}

@@ -54,7 +54,7 @@ const Header = () => {
                         </ul> 
                     )}
                     <div className="cart-container">
-                        <Link onClick={e => e.preventDefault()}className="cart-icon">
+                        <Link to={"/cart"} className="cart-icon">
                             <FontAwesomeIcon icon={faCartShopping}/>
                         </Link>
                         <p>0</p>

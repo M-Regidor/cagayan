@@ -37,6 +37,7 @@ export const fetchProduct = productId => async (dispatch) => {
         dispatch(receiveProductInfo(data))
     } else {
         data = await res.json()
+        console.log(data)
     }
 
 }
