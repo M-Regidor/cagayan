@@ -22,3 +22,10 @@ export const destroyUserCart = userId => (
         method: "DELETE"
     })
 )
+
+export const updateCart = (cartItemId, quantity) => (
+    crsfFetch(`/api/cart_items/${cartItemId}`, {
+        method: "PATCH",
+        body: JSON.stringify(quantity)
+    })
+)

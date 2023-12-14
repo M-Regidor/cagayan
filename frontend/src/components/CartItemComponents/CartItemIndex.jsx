@@ -20,8 +20,10 @@ const CartItemIndex = () => {
     })
     
     useEffect(()=> {
-        dispatch(fetchCartItems(currentUser.id))
-    },[currentUser.id, dispatch])
+        if (currentUser){
+            dispatch(fetchCartItems(currentUser.id))
+        }
+    },[currentUser, dispatch])
     
 
     return (

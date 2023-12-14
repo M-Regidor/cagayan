@@ -6,12 +6,17 @@ import ProductIndexItem from "./ProductIndexItem"
 
 
 
-const ProductIndex = () => {
+const ProductIndex = ({category}) => {
     const dispatch = useDispatch()
     const products = useSelector(selectProductsArray)
+
     useEffect(()=> {
-        dispatch(fetchProducts())
-    }, [dispatch])
+        if (category){
+            dispatch(fetchProducts(category))
+        } else {
+            dispatch(fetchProducts())
+        }
+    }, [dispatch, category])
 
     return (
         <div className="product-background">

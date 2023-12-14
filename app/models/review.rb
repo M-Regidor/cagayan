@@ -17,7 +17,7 @@ class Review < ApplicationRecord
   validates :title, length: {in: 3..50}
   validates :body, length: {in: 10..1000}
   validates :author_id, :product_id, presence: true
-  validates :author_name, presence: true
+  validates :name, presence: true
 
   belongs_to :product
 

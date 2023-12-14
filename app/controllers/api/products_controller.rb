@@ -1,6 +1,10 @@
 class Api::ProductsController < ApplicationController
   def index
-    @products = Product.all
+    if params[:category]
+      @products = Product.where("LOWER(category) LIKE ?", "%#{params[:category].downcase}%")
+    else
+      @products = Product.all
+    end
     render :index
   end
 

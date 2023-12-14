@@ -30,6 +30,15 @@ class Api::CartItemsController < ApplicationController
     end
   end
 
+  def update
+    @cart_item = CartItem.find_by(id: params[:id])
+    if @cart_item.update(cart_params)
+      render :show
+    else
+      render json: ["issue"], status: 401
+    end
+  end
+
   def checkout
     user = User.find_by(id: params[:user_id])
     @cart_items = user.cart_items
@@ -39,7 +48,8 @@ class Api::CartItemsController < ApplicationController
       render json: {errors: ["No items to checkout"]}, status: 401
     end
   end
-  
+
+
   private
   def cart_params
     params.require(:cart_item).permit(:product_id, :user_id, :quantity)

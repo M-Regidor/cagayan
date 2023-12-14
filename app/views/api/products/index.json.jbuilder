@@ -8,7 +8,6 @@ def file_paths(product_name)
   else
     Array.new()
   end
-
 end
 
 @products.each do |product|

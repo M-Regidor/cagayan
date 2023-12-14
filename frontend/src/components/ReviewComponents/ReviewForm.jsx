@@ -25,7 +25,7 @@ const ReviewForm = () => {
         review = {
             title: "",
             body: "",
-            author_name: currentUser.name,
+            name: currentUser.name,
             authorId: currentUser.id,
             rating: null,
             productId,
@@ -51,7 +51,7 @@ const ReviewForm = () => {
     const [rating, setRating] = useState(review.rating);
     const [body, setBody] = useState(review.body)
     const [title, setTitle] = useState(review.title)
-    const [authorName, setAuthorName] = useState(review.authorName)
+    const [name, setName] = useState(review.name)
     const [errors, setErrors] = useState({})
 
     const handleError = field => {
@@ -92,7 +92,7 @@ const ReviewForm = () => {
             rating, 
             body,
             title,
-            author_name: authorName,
+            name
         }
 
  
@@ -190,8 +190,8 @@ const ReviewForm = () => {
                                     <FontAwesomeIcon className="create-author-icon" icon={faCircleUser}/>
                                     <input className="create-display-name-input"
                                     type="text"
-                                    value={authorName}
-                                    onChange={e => setAuthorName(e.target.value)}
+                                    value={name}
+                                    onChange={e => setName(e.target.value)}
                                     />
                                 </div>
                                     {handleError("name")}

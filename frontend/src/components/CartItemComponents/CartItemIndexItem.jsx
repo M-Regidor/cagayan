@@ -1,17 +1,23 @@
 import { useDispatch, useSelector } from "react-redux"
 import { fetchProduct, selectProduct } from "../../store/productReducer"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import "./CartItemIndexItem.css"
-import { removeItem } from "../../store/cartItem.Reducer"
+import { removeItem, updateQuantity } from "../../store/cartItem.Reducer"
 
 const CartItemIndexItem = ({cartItem}) => {
     const dispatch = useDispatch()
     const product = useSelector(selectProduct(cartItem.productId))
-
+    const [quantity, setQuantity] = useState(cartItem.quantity)
 
     useEffect(()=> {
         dispatch(fetchProduct(cartItem.productId))
     },[cartItem, dispatch])
+
+    const handleQuantityChange = e => {
+        const quantity = e.target.value
+        setQuantity(quantity)
+        dispatch(updateQuantity(cartItem.id, {quantity}))
+      };
 
     if (product) {
         return (
@@ -20,16 +26,19 @@ const CartItemIndexItem = ({cartItem}) => {
             <div className="cart-item-details">
                 <h2>{product.name}</h2>
                 <div className="cart-item-menu">
-                    <label>QTY: {cartItem.quantity}</label>
-                        <select id="quantity" name="quantity">
-                            {/* <option value="1">{"0 (delete)"}</option> */}
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
+                <label>QTY:</label>
+                    <select
+                    id="quantity"
+                    name="quantity"
+                    value={quantity}
+                    onChange={handleQuantityChange}
+                    >
+                    {[1, 2, 3, 4, 5, 6].map((value) => (
+                        <option key={value} value={value}>
+                        {value}
+                        </option>
+                    ))}
+                    </select>
                     <a href="#" onClick={() => dispatch(removeItem(cartItem.id))}>delete</a>
                 </div>
             </div>

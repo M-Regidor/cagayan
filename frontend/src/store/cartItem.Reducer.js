@@ -1,5 +1,5 @@
 import { createSelector } from "reselect"
-import { deleteCartItem, destroyUserCart, getCartItems, postCartItem } from "../utils/cartItem_api_util"
+import { deleteCartItem, destroyUserCart, getCartItems, postCartItem, updateCart } from "../utils/cartItem_api_util"
 
 export const RECEIVE_CARTITEM = "RECEIVE_CARTITEM"
 export const RECEIVE_CARTITEMS = "RECEIVE_CARTITEMS"
@@ -68,6 +68,18 @@ export const checkoutUser = userId => async(dispatch) => {
     
     if (res.ok){
         dispatch(removeAllCartItems())
+    }
+}
+
+export const updateQuantity = (cartItemId, quantity) => async(dispatch) => {
+    const res = await (updateCart(cartItemId, quantity))
+    let data;
+
+    if (res.ok){
+        data = await res.json()
+        dispatch(receiveCartItem(data.cartItem))
+    } else {
+        console.log("something went wrong")
     }
 }
 

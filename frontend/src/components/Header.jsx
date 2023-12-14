@@ -4,7 +4,7 @@ import { logoutUser } from "../store/sessionReducer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
-import { fetchCartItems, selectCartItemsArray } from "../store/cartItem.Reducer"
+import { fetchCartItems, removeAllCartItems, selectCartItemsArray } from "../store/cartItem.Reducer"
 import { useEffect } from "react"
 
 
@@ -21,13 +21,17 @@ const Header = () => {
         return state.users[id]
     })
 
-    if (!currentUser) cartQuantity = 0
     
     useEffect(()=> {
         if (currentUser) {
             dispatch(fetchCartItems(currentUser.id))
         }
     },[dispatch, currentUser])
+
+    const handleLogout = () => {
+        dispatch(logoutUser(currentUser.id))
+        dispatch(removeAllCartItems(currentUser.id))
+    }
 
     return (
         <header className="navbar-container">
@@ -51,7 +55,7 @@ const Header = () => {
                                 <li className="user-icon"></li>                 
                                 <li><FontAwesomeIcon icon={faUser}/>Hello,<br/> {currentUser.name}
                                     <div className="user-menu">
-                                        <Link onClick={() => dispatch(logoutUser(currentUser.id))}>Logout</Link>
+                                        <Link onClick={handleLogout}>Logout</Link>
                                     </div>
                                 </li>
                             </ul> 
@@ -76,10 +80,10 @@ const Header = () => {
             <nav className="navbar-bottom">
                 <div className="navbar-bottom-menu">
                     <Link className="navbar-bottom-button" to={'/products'}>All</Link>
-                    <Link className="navbar-bottom-button">Home</Link>
-                    <Link className="navbar-bottom-button">Electronics</Link>
-                    <Link className="navbar-bottom-button">Clothing</Link>
-                    <Link className="navbar-bottom-button">Health and Beauty</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Home"}>Home</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Electronics"}>Electronics</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Clothing"}>Clothing</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Health"}>Health and Beauty</Link>
                 </div>
             </nav>
         </header>

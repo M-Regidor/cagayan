@@ -7,6 +7,7 @@ import ProductShow from './components/ProductComponents/ProductShow';
 import ProductHome from './components/ProductComponents/ProductHome';
 import ReviewForm from './components/ReviewComponents/ReviewForm';
 import CartItemIndex from './components/CartItemComponents/CartItemIndex';
+import FilteredProducts from './components/FilteredProducts';
 
 
 
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
           element: <ReviewForm/>
         }
     ]
+  },
+  {
+      path: "/category/:category",
+      element: <FilteredProducts/>
   },
   {
     path: "cart",

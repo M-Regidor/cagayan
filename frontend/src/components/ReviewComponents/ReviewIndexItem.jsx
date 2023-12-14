@@ -10,18 +10,20 @@ import { useNavigate } from 'react-router-dom'
 const ReviewIndexItem = ({review, currentUser}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const isCurrentUser = currentUser && currentUser.id === review.authorId;
+    
 
     return (
         <li key={review.id}>
             <div className="review-details-author">
                 <FontAwesomeIcon className="review-author-icon" icon={faCircleUser}/>
-                <h3>{review.authorName}</h3>
+                <h3>{review.name}</h3>
             </div>
             <p>Rating: {review.rating} {review.title}</p>
             <p>Reviewed on {formatDate(review.createdAt)}</p>
             <p>{review.body}</p>
             <div className='review-item-buttons'>
-                {currentUser? (
+                {isCurrentUser ? (
                     <>
                         <button onClick={()=> dispatch(userReviewDelete(review))}>Delete</button>
                         <button onClick={() => navigate(`/products/${review.productId}/edit-review/${review.id}`)}>Edit</button>

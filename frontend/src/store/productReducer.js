@@ -14,12 +14,11 @@ export const receiveProductInfo = product => ({
     product
 })
 
-export const fetchProducts = () => async (dispatch) => {
-    const res = await getProducts();
+export const fetchProducts = (category) => async (dispatch) => {
+    const res = await getProducts(category);
     let data;
 
     if (res.ok){
-
         data = await res.json()
         dispatch(receiveProducts(data))
     } else {
@@ -58,7 +57,7 @@ const productReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_PRODUCTS:
-            return {...newState, ...action.products}
+            return action.products
         case RECEIVE_PRODUCT:
             newState[action.product.id] = action.product
             return newState
