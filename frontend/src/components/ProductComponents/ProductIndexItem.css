@@ -2,20 +2,23 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 450px;
-    margin-bottom: 40px;
+    height: 700px;
+    /* margin-bottom: 200px; */
 }
 
 .product-info-top{
     width: inherit;
-    height: 60%;
+    height: 310px;
 }
+
 
 .product-img {
     width: inherit;
     height: 100%;
     /* background: pink; */
 }
+
+
 
 .product-title {
     color: black;
@@ -24,7 +27,7 @@
 .product-info-bottom {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     width: inherit;
     height: 40%;
     font-size: 20px;
@@ -34,3 +37,16 @@
     height: 100%;
     width: inherit;
 }
+
+.product-cart button{
+    height: 35px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 102);
+    border: 1px;
+}
+
+/* .product-price {
+    margin-top: 20px;
+    margin-bottom: 20px;
+} */

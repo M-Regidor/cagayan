@@ -67,11 +67,12 @@ const ProductShow = () => {
                             <div className="show-product-details">
                                 <div className="show-details-title">{product.name}</div>
                                 <div className="show-details-price">
-                                    ${product.price} <br />
-                                    {rating(product.rating)}
+                                    <h5>${product.price}</h5>
+                                    <div>{rating(product.rating)}</div>
                                 </div>
                                 <div className="show-details-description">
-                                    About this item <br/>{product?.description}
+                                    <h3>About this item</h3>
+                                    <p>{product?.description}</p>
                                 </div>
                             </div>
                     </div>

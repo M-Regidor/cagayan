@@ -17,7 +17,7 @@
     justify-content: center;
     width: inherit;
     gap: 15px;
-    height: 670px;
+    height: 900px;
     min-width: 1000px;
 }
 
@@ -104,10 +104,18 @@
 
 }
 .show-details-price{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
     width: 100%;
-    min-height: 200px;
+    min-height: 150px;
     border-bottom: 1px solid;
     font-size: xx-large;
+}
+
+.show-details-price h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .show-details-description{

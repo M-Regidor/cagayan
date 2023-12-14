@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     height: inherit;
+    gap: 15px;
 }
 
 .link-icons a img {

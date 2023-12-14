@@ -3,14 +3,20 @@ import { fetchProducts, filterProducts, selectProductsArray } from "../../store/
 import { useEffect } from "react"
 import "./ProductIndex.css"
 import ProductIndexItem from "./ProductIndexItem"
-import { selectReviewsArray } from "../../store/reviewReducer"
+
 
 
 
 const ProductIndex = ({category, keyword}) => {
     const dispatch = useDispatch()
-    const products = useSelector(selectProductsArray)
+    let products = useSelector(selectProductsArray)
     
+    const shuffleProducts = (arr) => {
+        return arr.sort(()=> Math.random() - 0.5);
+    }
+
+    if (!category && !keyword) products = shuffleProducts(products)
+
     let title;
     
     if (category) {
@@ -35,15 +41,15 @@ const ProductIndex = ({category, keyword}) => {
         <div className="product-background">
             <div className="product-index-title">
                 <h2>{title}</h2>
+                <ul className="product-container">
+                    {products.map(product => (
+                        <ProductIndexItem
+                            key={product.id}
+                            product={product}
+                        />
+                    ))}
+                </ul>
             </div>
-            <ul className="product-container">
-                {products.map(product => (
-                    <ProductIndexItem
-                        key={product.id}
-                        product={product}
-                    />
-                ))}
-            </ul>
         </div>
     )
 }
