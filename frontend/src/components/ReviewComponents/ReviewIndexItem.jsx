@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
-import { formatDate } from "../../utils/dateUtil"
+import { formatDate, rating } from "../../utils/dateUtil"
 import "./ReviewIndexItem.css"
 import { useDispatch } from 'react-redux'
 import { userReviewDelete } from '../../store/reviewReducer'
@@ -11,7 +11,7 @@ const ReviewIndexItem = ({review, currentUser}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const isCurrentUser = currentUser && currentUser.id === review.authorId;
-    
+
 
     return (
         <li key={review.id}>
@@ -19,7 +19,7 @@ const ReviewIndexItem = ({review, currentUser}) => {
                 <FontAwesomeIcon className="review-author-icon" icon={faCircleUser}/>
                 <h3>{review.name}</h3>
             </div>
-            <p>Rating: {review.rating} {review.title}</p>
+            <p>{rating(review.rating)} {review.title}</p>
             <p>Reviewed on {formatDate(review.createdAt)}</p>
             <p>{review.body}</p>
             <div className='review-item-buttons'>

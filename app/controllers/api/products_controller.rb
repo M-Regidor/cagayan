@@ -3,11 +3,10 @@ class Api::ProductsController < ApplicationController
     if params[:category]
       @products = Product.where("LOWER(category) LIKE ?", "%#{params[:category].downcase}%")
     elsif params[:keyword]
+      keyword = params[:keyword].downcase
       @products = Product.where(
-        "LOWER(name) LIKE ? OR LOWER(description) LIKE ? OR LOWER(category) LIKE ?",
-        "%#{params[:keyword].downcase}%",
-        "%#{params[:keyword].downcase}%",
-        "%#{params[:keyword].downcase}%"
+        "LOWER(name) ILIKE ? OR LOWER(description) ILIKE ? OR LOWER(category) ILIKE ?",
+        "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"
       )
     else
       @products = Product.all

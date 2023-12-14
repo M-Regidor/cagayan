@@ -15,7 +15,7 @@
 class Review < ApplicationRecord
   validates :rating, numericality: { less_than_or_equal_to: 5, message: "can't not be blank"}
   validates :title, length: {in: 3..50}
-  validates :body, length: {in: 10..1000}
+  validates :body, length: {in: 10..5000}
   validates :author_id, :product_id, presence: true
   validates :name, presence: true
 

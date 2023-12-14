@@ -63,3 +63,31 @@ export const camelToSnake = (obj) => {
     return acc;
   }, {});
 }
+
+// export const currentDate = new Date()
+// export const futureDate = new Date()
+// const randomDays = Math.floor(Math.random() * 6) + 5;
+
+// futureDate.setDate(currentDate.getDate() + randomDays)
+
+// export const formattedDate = futureDate.toLocaleDateString("en-US",{
+//     month: "long",
+//     day: "numeric"
+// })
+
+export const rating = customerRating => {
+  switch (customerRating) {
+      case 5:
+          return "⭐⭐⭐⭐⭐"
+      case 4:
+          return "⭐⭐⭐⭐"
+      case 3:
+          return "⭐⭐⭐"
+      case 2:
+          return "⭐⭐"
+      case 1:
+          return "⭐"
+      default:
+          break
+  }
+}

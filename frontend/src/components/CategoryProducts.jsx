@@ -5,14 +5,14 @@ import { useEffect } from "react"
 
 const CategoryProducts = () => {
     const {category} = useParams()
-    const categories = ["Home", "Electronics","Clothing","Health"]
     const navigate = useNavigate() 
     
     useEffect(()=>{
+        const categories = ["Home", "Electronics","Clothing","Health"]
         if (!categories.includes(category)){
             navigate("/")
         }
-    },[categories,category,navigate])
+    },[category,navigate])
 
     return (
         <>
