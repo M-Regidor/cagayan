@@ -1,4 +1,5 @@
-// NB: this file is complete - you do not to write/edit anything!
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 export const formatDate = date => {
   const months = {
@@ -76,6 +77,7 @@ export const camelToSnake = (obj) => {
 // })
 
 export const rating = customerRating => {
+  // const good = <FontAwesomeIcon icon={faStar} color="#ffc107"/>
   switch (customerRating) {
       case 5:
           return "⭐⭐⭐⭐⭐"

@@ -5,6 +5,8 @@ import { fetchProduct, selectProduct } from "../../store/productReducer"
 import "./ProductShow.css"
 import ReviewIndex from "../ReviewComponents/ReviewIndex"
 import { addCartItem } from "../../store/cartItem.Reducer"
+import { fetchReviews, selectReviewsArray } from "../../store/reviewReducer"
+import { rating } from "../../utils/dateUtil"
 
 
 
@@ -12,7 +14,12 @@ import { addCartItem } from "../../store/cartItem.Reducer"
 const ProductShow = () => {
     const dispatch = useDispatch()
     const {productId} = useParams()
+    const reviews = useSelector(selectReviewsArray)
     const product = useSelector(selectProduct(productId))
+    const reviewSum = reviews.reduce((sum, review) => sum + review.rating, 0);
+    const reviewAverage = Math.round(reviewSum / reviews.length)
+
+    
 
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
@@ -20,7 +27,9 @@ const ProductShow = () => {
     })
 
     useEffect(()=>{
-        dispatch(fetchProduct(productId))
+        dispatch(fetchProduct(productId)).then(
+            dispatch(fetchReviews(productId))
+        )
     },[dispatch, productId])
     
     const handleClick = () => {
@@ -61,7 +70,7 @@ const ProductShow = () => {
                                 <div className="show-details-title">{product.name}</div>
                                 <div className="show-details-price">
                                     ${product.price} <br />
-                                    Rating:
+                                    {rating(reviewAverage)}
                                 </div>
                                 <div className="show-details-description">
                                     About this item <br/>{product?.description}
@@ -85,7 +94,7 @@ const ProductShow = () => {
                     </div>
                 </div>
                 <div className="show-reviews-container">
-                    <ReviewIndex productId={product.id}/>
+                    <ReviewIndex reviews={reviews}/>
                 </div>
             </div>
         )

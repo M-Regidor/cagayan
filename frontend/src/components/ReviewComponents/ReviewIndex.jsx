@@ -5,9 +5,9 @@ import "./ReviewIndex.css"
 import ReviewIndexItem from "./ReviewIndexItem"
 import { useNavigate } from "react-router-dom"
 
-const ReviewIndex = ({productId}) => {
-    const dispatch = useDispatch()
-    const reviews = useSelector(selectReviewsArray)
+const ReviewIndex = ({reviews}) => {
+    // const dispatch = useDispatch()
+    // const reviews = useSelector(selectReviewsArray)
     const navigate = useNavigate()
 
     const currentUser = useSelector(state => {
@@ -15,9 +15,9 @@ const ReviewIndex = ({productId}) => {
         return state.users[id]
     })
 
-    useEffect(()=> {
-        dispatch(fetchReviews(productId))
-    },[productId,dispatch])
+    // useEffect(()=> {
+    //     dispatch(fetchReviews(productId))
+    // },[productId,dispatch])
 
 
     const handleClick = () => {
