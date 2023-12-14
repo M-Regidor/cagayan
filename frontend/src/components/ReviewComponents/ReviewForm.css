@@ -60,3 +60,18 @@
     font-size: 50px;
 }
 
+.create-review-rating {
+    display: flex;
+}
+
+.create-review-rating input[type=radio] {
+    display: none;
+}
+
+.star {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+
