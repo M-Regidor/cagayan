@@ -7,7 +7,6 @@ import ProductShow from './components/ProductComponents/ProductShow';
 import ProductHome from './components/ProductComponents/ProductHome';
 import ReviewForm from './components/ReviewComponents/ReviewForm';
 import CartItemIndex from './components/CartItemComponents/CartItemIndex';
-import CategoryProducts from './components/ProductComponents/CategoryProducts';
 import SearchProducts from './components/ProductComponents/SearchProducts';
 
 
@@ -42,7 +41,7 @@ const router = createBrowserRouter([
   },
   {
       path: "category/:category",
-      element: <CategoryProducts/>
+      element: <SearchProducts/>
   },
   {
     path: "search/:keyword",

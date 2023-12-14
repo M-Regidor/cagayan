@@ -43,7 +43,10 @@ const ProductIndexItem = ({product}) => {
                 <div>
                     <div className="product-category">{product.category}</div>
                     <div className="product-rating">{rating(product.rating)}</div> 
-                    <div className="product-price"><h3>${product.price}</h3></div>
+                    <div className="product-price">
+                        <p>$</p>
+                        <h3>{product.price}</h3>
+                    </div>
                     <div className="product-delivery">estimated delivery date: {formattedDate}</div>
                 </div>
                 <div className="product-cart">

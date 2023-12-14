@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     height: inherit;
-    /* min-width: 1030px; */
+    min-width: 800px;
     margin-top: 20px;
 
 }
@@ -22,7 +22,7 @@
     gap: 10px;
 }
 
-.product-index-title {
+/* .product-index- {
     display: flex;
     flex-direction: column;
-}
+} */

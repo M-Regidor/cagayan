@@ -18,7 +18,14 @@
     /* background: pink; */
 }
 
+.product-price {
+    display: flex;
+    gap: 2px;
+}
 
+.product-price p{
+    padding-top: 2px;
+}
 
 .product-title {
     color: black;
@@ -42,11 +49,12 @@
     height: 35px;
     width: 90px;
     border-radius: 10px;
-    background-color: rgb(240, 240, 102);
+    background: rgb(240, 240, 102);
     border: 1px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* .product-price {
-    margin-top: 20px;
-    margin-bottom: 20px;
-} */
+.product-cart button:hover {
+    background: rgb(224, 224, 95);
+}

@@ -8,5 +8,6 @@
 
 .review-container {
     display: flex;
-    padding-left: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
 }

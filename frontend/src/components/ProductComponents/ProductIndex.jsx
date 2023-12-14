@@ -39,7 +39,7 @@ const ProductIndex = ({category, keyword}) => {
 
     return (
         <div className="product-background">
-            <div className="product-index-title">
+            <div className="product-index-container">
                 <h2>{title}</h2>
                 <ul className="product-container">
                     {products.map(product => (
