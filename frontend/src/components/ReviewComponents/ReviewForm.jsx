@@ -25,13 +25,13 @@ const ReviewForm = () => {
         review = {
             title: "",
             body: "",
-            author_name: currentUser.name,
+            name: currentUser.name,
             authorId: currentUser.id,
             rating: null,
             productId,
         }
     }
-    // console.log(review)
+
 
     useEffect(()=>{
         if (!currentUser) {
@@ -51,7 +51,7 @@ const ReviewForm = () => {
     const [rating, setRating] = useState(review.rating);
     const [body, setBody] = useState(review.body)
     const [title, setTitle] = useState(review.title)
-    const [authorName, setAuthorName] = useState(review.authorName)
+    const [name, setName] = useState(review.name)
     const [errors, setErrors] = useState({})
 
     const handleError = field => {
@@ -92,22 +92,20 @@ const ReviewForm = () => {
             rating, 
             body,
             title,
-            author_name: authorName,
+            name
         }
-        console.log(review)
+
  
         if (formType === "Create Review"){
             dispatch(createReview(review)).then(() => {
                 navigate(`/products/${productId}`);
             }).catch(msg => {
-                console.log(msg)
                 setErrors(msg);
             });
         } else {
             dispatch(editReview(review)).then(() => {
                 navigate(`/products/${productId}`);
             }).catch(msg => {
-                console.log(msg)
                 setErrors(msg);
             });
         }
@@ -192,8 +190,8 @@ const ReviewForm = () => {
                                     <FontAwesomeIcon className="create-author-icon" icon={faCircleUser}/>
                                     <input className="create-display-name-input"
                                     type="text"
-                                    value={authorName}
-                                    onChange={e => setAuthorName(e.target.value)}
+                                    value={name}
+                                    onChange={e => setName(e.target.value)}
                                     />
                                 </div>
                                     {handleError("name")}

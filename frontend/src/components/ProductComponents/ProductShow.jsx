@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import { fetchProduct, selectProduct } from "../../store/productReducer"
 import "./ProductShow.css"
 import ReviewIndex from "../ReviewComponents/ReviewIndex"
+import { addCartItem } from "../../store/cartItem.Reducer"
 
 
 
@@ -13,11 +14,24 @@ const ProductShow = () => {
     const {productId} = useParams()
     const product = useSelector(selectProduct(productId))
 
-
+    const currentUser = useSelector(state => {
+        const id = state.session.currentUserId;
+        return state.users[id]
+    })
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
     },[dispatch, productId])
+    
+    const handleClick = () => {
+        const payload = {
+            product_id: productId,
+            user_id: currentUser.id,
+            quantity: 1
+        }
+
+        dispatch(addCartItem(payload))
+    }
     
     if (product){
         return (
@@ -47,7 +61,7 @@ const ProductShow = () => {
                                 <div className="show-details-title">{product.name}</div>
                                 <div className="show-details-price">
                                     ${product.price} <br />
-                                    Rating: {product.rating}
+                                    Rating:
                                 </div>
                                 <div className="show-details-description">
                                     About this item <br/>{product?.description}
@@ -59,7 +73,10 @@ const ProductShow = () => {
                             <div className="show-buy-menu-main">
                                 <p>${product?.price}</p>
                                 <div className="show-buy-buttons">
-                                    <button className="show-buy-cart">Add to Cart</button>
+                                    <button 
+                                    className="show-buy-cart"
+                                    onClick={handleClick}
+                                    >Add to Cart</button>
                                     <button className="show-buy-now">Buy Now</button>
                                 </div>
                             </div>

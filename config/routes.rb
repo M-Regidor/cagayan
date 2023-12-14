@@ -6,12 +6,17 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   namespace :api, defaults: { format: :json} do
-    resources :users, only: [:create]
+    resources :users, only: [:create] do
+            resources :cart_items, only:[:index] do
+                delete 'checkout', on: :collection, to: 'cart_items#checkout'
+            end
+    end
     resource :session, only: [:show, :create, :destroy]
     resources :products, only: [:index, :show] do
           resources :reviews, only:[:index]
     end
     resources :reviews, except: [:index]
+    resources :cart_items, except: [:show, :index]
   end
 
   get '*path',

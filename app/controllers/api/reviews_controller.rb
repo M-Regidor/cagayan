@@ -1,8 +1,5 @@
 class Api::ReviewsController < ApplicationController
-
-  before_action :snake_case_params, only: [:create]
-
-  def index
+   def index
     product = Product.find_by(id: params[:product_id])
     @reviews = product.reviews
     if product
@@ -16,7 +13,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.product_id = params[:product_id]
     @review.author_id = params[:author_id]
-    # @reivew.author_name = params[:authorName]
+    # @review.author_name = params[:authorName]
     if @review.save
       render :show
     else
@@ -26,9 +23,9 @@ class Api::ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find_by(id: params[:id])
-      if @review.destroy
-        head :no_content
-      end
+    if @review.destroy
+      head :no_content
+    end
   end
 
   def show
@@ -47,11 +44,10 @@ class Api::ReviewsController < ApplicationController
     else
       render json: @review.errors, status: :unprocessable_entity
     end
-
   end
 
   private
   def review_params
-    params.require(:review).permit(:title, :body, :rating, :author_id, :author_name, :product_id)
+    params.require(:review).permit(:title, :body, :rating, :author_id, :name, :product_id)
   end
 end

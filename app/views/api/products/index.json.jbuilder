@@ -8,12 +8,11 @@ def file_paths(product_name)
   else
     Array.new()
   end
-
 end
 
 @products.each do |product|
   json.set! product.id do
-    json.extract! product, :id, :name, :price, :rating, :category
+    json.extract! product, :id, :name, :price, :category
     json.imgUrls product.images.attached? ? [url_for(product.images.first)] : file_paths(product.name)
   end
 end

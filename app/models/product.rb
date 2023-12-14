@@ -17,11 +17,11 @@ class Product < ApplicationRecord
   presence: true,
   numericality: { greater_than_or_equal_to: 1.0, less_than_or_equal_to: 999999.99 }
   validates :description, length: {in: 3..300}
-  validates :rating, presence: true, numericality: { less_than_or_equal_to: 5 }
+  # validates :rating, presence: true, numericality: { less_than_or_equal_to: 5 }
   validates :category, presence: true
 
   has_many_attached :images
-
+  
   has_many :reviews,
   dependent: :destroy
 
@@ -29,5 +29,7 @@ class Product < ApplicationRecord
   through: :reviews,
   source: :user
 
+  has_many :cart_items,
+  dependent: :destroy
 
 end

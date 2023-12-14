@@ -1,0 +1,29 @@
+.cart-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 700px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    min-width: 700px;
+    width: 800px;
+}
+
+.cart-item-image {
+    height: 200px;
+    width: 260px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+.cart-item-menu {
+    display: flex;
+    gap: 10px;
+}

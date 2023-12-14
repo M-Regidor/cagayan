@@ -10,7 +10,7 @@ const ProductIndexItem = ({product}) => {
             <div className="product-info-bottom">
                 <Link className="product-title" to={`/products/${product.id}`}>{product.name}</Link>
                 <div className="product-category">{product.category}</div>
-                <div className="product-rating">Rating: {product.rating}</div> 
+                <div className="product-rating">Rating:</div> 
                 <div className="product-price">${product.price}</div>
                 <div className="product-delivery">estimated delivery date: Someday or never</div>
             </div>

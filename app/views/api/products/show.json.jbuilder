@@ -1,4 +1,4 @@
-json.extract! @product, :id, :name, :price, :description, :rating, :category
+json.extract! @product, :id, :name, :price, :description,  :category
 
 if @product.images.attached?
   json.imgUrls  @product.images.map {|img| url_for(img)}

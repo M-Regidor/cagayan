@@ -1,21 +1,44 @@
 import { useDispatch, useSelector} from "react-redux"
-import { Link} from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 import { logoutUser } from "../store/sessionReducer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
-
+import { fetchCartItems, removeAllCartItems, selectCartItemsArray } from "../store/cartItem.Reducer"
+import { useEffect, useState } from "react"
 
 
 
 const Header = () => {
     const dispatch = useDispatch()
+    const cartItems = useSelector(selectCartItemsArray)
+    const navigate = useNavigate()
+    let cartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
+    const [keyword, setKeyword] = useState("") 
+    
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
         return state.users[id]
     })
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        navigate(`/search/${keyword}`)
+        setKeyword("")
+    }
+
+    
+    useEffect(()=> {
+        if (currentUser) {
+            dispatch(fetchCartItems(currentUser.id))
+        }
+    },[dispatch, currentUser])
+
+    const handleLogout = () => {
+        dispatch(logoutUser(currentUser.id))
+        dispatch(removeAllCartItems(currentUser.id))
+    }
 
     return (
         <header className="navbar-container">
@@ -27,8 +50,12 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-top-middle">
-                    <form onSubmit={e => e.preventDefault()}>
-                        <input type="text"/>
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                        type="text"
+                        value={keyword}
+                        onChange={e => setKeyword(e.target.value)}
+                        />
                         <button><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
                     </form>
                 </div>
@@ -39,7 +66,7 @@ const Header = () => {
                                 <li className="user-icon"></li>                 
                                 <li><FontAwesomeIcon icon={faUser}/>Hello,<br/> {currentUser.name}
                                     <div className="user-menu">
-                                        <Link onClick={() => dispatch(logoutUser(currentUser.id))}>Logout</Link>
+                                        <Link onClick={handleLogout}>Logout</Link>
                                     </div>
                                 </li>
                             </ul> 
@@ -54,20 +81,20 @@ const Header = () => {
                         </ul> 
                     )}
                     <div className="cart-container">
-                        <Link onClick={e => e.preventDefault()}className="cart-icon">
+                        <Link to={"/cart"} className="cart-icon">
                             <FontAwesomeIcon icon={faCartShopping}/>
                         </Link>
-                        <p>0</p>
+                        <p>{cartQuantity}</p>
                     </div>
                 </div>
             </nav>
             <nav className="navbar-bottom">
                 <div className="navbar-bottom-menu">
                     <Link className="navbar-bottom-button" to={'/products'}>All</Link>
-                    <Link className="navbar-bottom-button">Home</Link>
-                    <Link className="navbar-bottom-button">Electronics</Link>
-                    <Link className="navbar-bottom-button">Clothing</Link>
-                    <Link className="navbar-bottom-button">Health and Beauty</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Home"}>Home</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Electronics"}>Electronics</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Clothing"}>Clothing</Link>
+                    <Link className="navbar-bottom-button" to={"/category/Health"}>Health and Beauty</Link>
                 </div>
             </nav>
         </header>
