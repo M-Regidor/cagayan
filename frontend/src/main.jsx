@@ -11,6 +11,7 @@ import { restoreSession } from './utils/csrf';
 
 
 
+
 const initializeApp = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))
     let initialState;

@@ -1,4 +1,9 @@
+rating = Review.where(product_id: @product.id).average(:rating).round()
+
+
 json.extract! @product, :id, :name, :price, :description,  :category
+json.rating rating
+
 
 if @product.images.attached?
   json.imgUrls  @product.images.map {|img| url_for(img)}

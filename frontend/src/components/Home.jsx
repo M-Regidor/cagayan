@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import Header from "./Header";
 import "./Home.css"
 import Deal from "./Deal";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
                 </div>
             </div>
             <Outlet/>
+            <Footer/>
          </>
     )
 }

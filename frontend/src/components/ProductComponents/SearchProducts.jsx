@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
-import Header from "./Header"
-import ProductIndex from "./ProductComponents/ProductIndex"
+import Header from "../Header"
+import ProductIndex from "./ProductIndex"
+import Footer from "../Footer";
 
 const SearchProducts = () => {
     const {keyword} = useParams();
@@ -10,6 +11,7 @@ const SearchProducts = () => {
         <>
             <Header/>
             <ProductIndex keyword={keyword}/>
+            <Footer/>
         </>
     )
 }

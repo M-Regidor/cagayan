@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom"
-import Header from "./Header"
-import ProductIndex from "./ProductComponents/ProductIndex"
+import Header from "../Header"
+import ProductIndex from "./ProductIndex"
 import { useEffect } from "react"
+import Footer from "../Footer"
 
 const CategoryProducts = () => {
     const {category} = useParams()
@@ -18,6 +19,7 @@ const CategoryProducts = () => {
         <>
             <Header/>
             <ProductIndex category={category}/>
+            <Footer/>
         </>
     )
 }

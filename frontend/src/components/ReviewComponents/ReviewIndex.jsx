@@ -1,11 +1,11 @@
-import { useDispatch, useSelector } from "react-redux"
-import { fetchReviews, selectReviewsArray } from "../../store/reviewReducer"
-import { useEffect } from "react"
+import { useSelector } from "react-redux"
+// import { fetchReviews, selectReviewsArray } from "../../store/reviewReducer"
+// import { useEffect } from "react"
 import "./ReviewIndex.css"
 import ReviewIndexItem from "./ReviewIndexItem"
 import { useNavigate } from "react-router-dom"
 
-const ReviewIndex = ({reviews}) => {
+const ReviewIndex = ({reviews, productId}) => {
     // const dispatch = useDispatch()
     // const reviews = useSelector(selectReviewsArray)
     const navigate = useNavigate()

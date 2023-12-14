@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: 110px;
+    /* background: beige; */
+}
+
+.link-icons {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.link-icons a img {
+    height: 70px;
+}

@@ -2,11 +2,11 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { fetchProduct, selectProduct } from "../../store/productReducer"
-import "./ProductShow.css"
 import ReviewIndex from "../ReviewComponents/ReviewIndex"
 import { addCartItem } from "../../store/cartItem.Reducer"
 import { fetchReviews, selectReviewsArray } from "../../store/reviewReducer"
 import { rating } from "../../utils/dateUtil"
+import "./ProductShow.css"
 
 
 
@@ -16,8 +16,6 @@ const ProductShow = () => {
     const {productId} = useParams()
     const reviews = useSelector(selectReviewsArray)
     const product = useSelector(selectProduct(productId))
-    const reviewSum = reviews.reduce((sum, review) => sum + review.rating, 0);
-    const reviewAverage = Math.round(reviewSum / reviews.length)
 
     
 
@@ -70,7 +68,7 @@ const ProductShow = () => {
                                 <div className="show-details-title">{product.name}</div>
                                 <div className="show-details-price">
                                     ${product.price} <br />
-                                    {rating(reviewAverage)}
+                                    {rating(product.rating)}
                                 </div>
                                 <div className="show-details-description">
                                     About this item <br/>{product?.description}
@@ -94,7 +92,10 @@ const ProductShow = () => {
                     </div>
                 </div>
                 <div className="show-reviews-container">
-                    <ReviewIndex reviews={reviews}/>
+                    <ReviewIndex
+                    productId={productId}
+                    reviews={reviews}
+                    />
                 </div>
             </div>
         )
