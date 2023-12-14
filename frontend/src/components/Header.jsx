@@ -1,25 +1,32 @@
 import { useDispatch, useSelector} from "react-redux"
-import { Link} from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 import { logoutUser } from "../store/sessionReducer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 import { fetchCartItems, removeAllCartItems, selectCartItemsArray } from "../store/cartItem.Reducer"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 
 
 const Header = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector(selectCartItemsArray)
+    const navigate = useNavigate()
     let cartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-
+    const [keyword, setKeyword] = useState("") 
     
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
         return state.users[id]
     })
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        navigate(`/search/${keyword}`)
+        setKeyword("")
+    }
 
     
     useEffect(()=> {
@@ -43,8 +50,12 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-top-middle">
-                    <form onSubmit={e => e.preventDefault()}>
-                        <input type="text"/>
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                        type="text"
+                        value={keyword}
+                        onChange={e => setKeyword(e.target.value)}
+                        />
                         <button><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
                     </form>
                 </div>

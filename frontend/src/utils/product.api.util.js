@@ -8,6 +8,10 @@ export const getProducts = category => {
     }
 }
 
+export const searchProducts = keyword => (
+    crsfFetch(`/api/products?keyword=${keyword}`)
+)
+
 
 export const getProduct = productId => (
     crsfFetch(`/api/products/${productId}`)

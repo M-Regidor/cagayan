@@ -2,6 +2,13 @@ class Api::ProductsController < ApplicationController
   def index
     if params[:category]
       @products = Product.where("LOWER(category) LIKE ?", "%#{params[:category].downcase}%")
+    elsif params[:keyword]
+      @products = Product.where(
+        "LOWER(name) LIKE ? OR LOWER(description) LIKE ? OR LOWER(category) LIKE ?",
+        "%#{params[:keyword].downcase}%",
+        "%#{params[:keyword].downcase}%",
+        "%#{params[:keyword].downcase}%"
+      )
     else
       @products = Product.all
     end

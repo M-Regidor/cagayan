@@ -2,14 +2,16 @@ import { useParams } from "react-router-dom"
 import Header from "./Header"
 import ProductIndex from "./ProductComponents/ProductIndex"
 
-const FilteredProducts = () => {
-    const {category} = useParams()
-
+const SearchProducts = () => {
+    const {keyword} = useParams();
+    console.log(keyword)
+    
     return (
         <>
             <Header/>
-            <ProductIndex category={category}/>
+            <ProductIndex keyword={keyword}/>
         </>
     )
 }
-export default FilteredProducts
+
+export default SearchProducts

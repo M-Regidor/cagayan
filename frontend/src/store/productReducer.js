@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { getProducts, getProduct } from "../utils/product.api.util"
+import { getProducts, getProduct, searchProducts } from "../utils/product.api.util"
 
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS"
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT"
@@ -16,6 +16,19 @@ export const receiveProductInfo = product => ({
 
 export const fetchProducts = (category) => async (dispatch) => {
     const res = await getProducts(category);
+    let data;
+
+    if (res.ok){
+        data = await res.json()
+        dispatch(receiveProducts(data))
+    } else {
+        data = await res.json()
+    }
+
+}
+
+export const filterProducts = keyword => async (dispatch) => {
+    const res = await searchProducts(keyword);
     let data;
 
     if (res.ok){
