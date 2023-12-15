@@ -1,0 +1,184 @@
+{
+    "reviews":[
+        {
+            "name": "Katie", 
+            "title": "Awesome", 
+            "body":"This cookware set exceeded my expectations! The durable non-stick coating makes cooking and cleaning a breeze. The stylish design adds a touch of elegance to my kitchen. I appreciate the even heat distribution and sturdy build. A fantastic investment for any home chef!", 
+            "rating": 3, 
+            "author_id": 1, 
+            "product_id": 1
+        },
+        {
+           "name": "Bob",
+            "title": "Exceptional Cookware Set!", 
+            "body":"This cookware set is a kitchen game-changer! The non-stick surface is a breeze to clean, and the heat distribution is superb. It elevates my cooking experience, making every meal a delight. The sleek design adds a touch of elegance, and the durability ensures long-lasting performance. From searing to simmering, it handles everything effortlessly. Plus, the comfortable handles and quality construction make it a joy to cook with. I've tried various sets, but this one stands out. It's a worthwhile investment for any home chef. Highly recommended!", 
+            "rating": 4, 
+            "author_id":1, 
+            "product_id": 1
+        },
+        {
+            "name": "Steve", 
+            "title": "Versatile and Durable Cookware", 
+            "body": "This cookware set is a kitchen essential! The versatile pieces cater to all my cooking needs. From sautéing to boiling, each pot and pan performs exceptionally. The non-stick coating ensures easy food release, and cleaning is a breeze. I appreciate the sturdy construction that withstands high heat and daily use. The ergonomic handles provide a comfortable grip, enhancing the overall cooking experience. This set strikes the perfect balance between functionality and style. Whether you're a novice or seasoned chef, it's a reliable companion in the kitchen. A wise investment for anyone passionate about cooking!", 
+            "rating": 3, 
+            "author_id": 1, 
+            "product_id": 1
+        },
+        {
+            "name": "Eleanor",
+            "title": "Powerful Performance",
+            "body": "I recently added the SmoothBlend Max Power Blender to my kitchen, and it has exceeded my expectations. The raw power of this blender makes quick work of even the toughest ingredients. Whether I'm blending smoothies, soups, or nut butters, the results are consistently smooth and perfectly blended. The variable speed settings and pulse feature provide precise control, allowing me to achieve the desired texture every time.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 2
+        },
+        {
+            "name": "Jackson",
+            "title": "Efficient and Quick",
+            "body": "I recently upgraded to the QuickHeat Pro Microwave Oven, and it has become an indispensable part of my kitchen. The microwave's efficiency and speed in heating food are truly impressive. It handles a variety of dishes with ease, ensuring even heating throughout. The intuitive controls and pre-programmed settings make it a breeze to use, and the sleek design adds a modern touch to my kitchen. Cleaning is simple, and the compact size doesn't compromise on capacity. A reliable and efficient choice for anyone looking for a top-notch microwave.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 3
+        },
+        {
+            "name": "Olivia",
+            "title": "Transformative Comfort",
+            "body": "I recently invested in the DreamComfort Luxe Bedding Collection, and it has transformed my sleep experience. The luxurious comfort of these sheets and pillowcases is unparalleled. The material is soft, breathable, and feels incredibly indulgent against the skin. The attention to detail in the stitching and design adds an elegant touch to my bed. The DreamComfort Luxe Collection strikes the perfect balance between style and comfort, making it a delightful addition to any bedroom. I wake up feeling refreshed and surrounded by opulence every morning.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 4
+        },
+        {
+            "name": "Gabriel",
+            "title": "Elevating My Coffee Experience",
+            "body": "I recently added the Stellar Sip Ceramic Coffee Mug to my morning routine, and it has elevated my coffee experience. Sipping from this mug is a delight—it feels substantial in my hands, and the ceramic material keeps my coffee at the perfect temperature. The design is both stylish and functional, adding a touch of elegance to my coffee moments. The generous size is perfect for a satisfying cup, and the handle is comfortable to hold. The Stellar Sip Mug has become my go-to for a daily dose of caffeine, combining style and functionality seamlessly.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 5
+        },
+        {
+            "name": "Alexandra",
+            "title": "Sleek and Powerful",
+            "body": "The TechMaster Pro Smartphone has exceeded my expectations in terms of both design and performance. Its sleek and modern aesthetics make it a joy to hold and behold. The powerful hardware ensures smooth multitasking and quick responsiveness. The camera capabilities capture vivid details, and the high-resolution display enhances the overall viewing experience. The TechMaster Pro is truly a flagship device, offering a perfect blend of style and functionality.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 6
+        },
+        {
+            "name": "Daniel",
+            "title": "Immersive Entertainment",
+            "body": "The UltraVision 4K Smart TV has transformed my home entertainment setup. The stunning 4K resolution and vibrant colors bring movies, shows, and games to life. The smart features provide a seamless streaming experience, and the intuitive interface makes navigation a breeze. The UltraVision TV's sleek design and slim profile complement any room effortlessly. Whether it's movie night or gaming sessions, this TV delivers an immersive and enjoyable experience. A fantastic addition to any home theater setup.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 7
+        },
+        {
+            "name": "Emily",
+            "title": "Wireless Bliss",
+            "body": "The SoundWave Pro Wireless Earbuds have completely changed my audio experience. The wireless design provides freedom of movement, and the sound quality is exceptional. Whether I'm on a run or commuting, these earbuds deliver clear and immersive audio. The touch controls are intuitive, and the battery life is impressive. The compact charging case is a convenient bonus. SoundWave Pro Earbuds have become my go-to for a seamless and enjoyable listening experience.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 8
+        },
+        {
+            "name": "James",
+            "title": "Powerhouse Performance",
+            "body": "The GamerXtreme Gaming Laptop is a powerhouse that caters to every gamer's dream. The high-performance hardware ensures smooth gameplay and quick response times. The graphics are stunning, and the cooling system keeps everything running smoothly during intense gaming sessions. The keyboard is comfortable, and the customizable RGB lighting adds a stylish touch. The GamerXtreme Laptop is not just a gaming device; it's a statement of power and performance in a sleek and portable package.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 9
+        },
+        {
+            "name": "Michael",
+            "title": "Home Automation Bliss",
+            "body": "The SmartHome Hub and Speaker have become the central intelligence of my home. The seamless integration with smart devices and the voice-controlled features make daily tasks a breeze. The sound quality from the speaker is impressive, filling my home with rich and clear audio. Setting up routines and controlling devices with a simple voice command has made my life more convenient. The SmartHome Hub is a must-have for anyone looking to elevate their home into a smart and efficient living space.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 10
+        },
+        {
+            "name": "Avery",
+            "title": "Fashion Staple",
+            "body": "The Stylish Denim Jacket has quickly become a wardrobe essential for me. Its versatile design pairs effortlessly with various outfits, adding a touch of casual chic to any look. The denim material is comfortable, and the fit is just right. Whether layered over a dress or paired with jeans, this jacket is a fashion staple. The quality craftsmanship and attention to detail make it a standout piece in my collection.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 11
+        },
+        {
+            "name": "Evelyn",
+            "title": "Ultimate Comfort",
+            "body": "The CozyComfort Hooded Sweatshirt is my go-to for ultimate comfort. The soft and plush fabric keeps me warm on chilly days, and the hood adds an extra layer of coziness. The relaxed fit is perfect for lounging or casual outings. The attention to detail in the stitching and the durability of the material make it a long-lasting and well-loved addition to my casual wardrobe.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 12
+        },
+        {
+            "name": "Oliver",
+            "title": "Move Freely",
+            "body": "The ActiveFit Performance Leggings are a game-changer for my workout routine. The stretchy and breathable fabric allows me to move freely during any activity. The moisture-wicking technology keeps me dry and comfortable, even during intense workouts. The high waist provides excellent support, and the stylish design makes them suitable for both the gym and casual wear. These leggings have become my favorite choice for an active lifestyle.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 13
+        },
+        {
+            "name": "Sophia",
+            "title": "Timeless Elegance",
+            "body": "The Classic Leather Handbag is a testament to timeless elegance and sophistication. The quality of the leather and the meticulous craftsmanship make this handbag a true investment piece. It's spacious enough to carry all my essentials and versatile enough to complement any outfit. The attention to detail in the design, from the hardware to the stitching, is impeccable. A classic choice that stands the test of time.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 14
+        },
+        {
+            "name": "Mia",
+            "title": "Effortless Style",
+            "body": "The Casual Weekend Tee is a must-have for laid-back style. The soft and breathable fabric makes it comfortable for all-day wear, and the relaxed fit adds an effortless charm. Whether paired with jeans or leggings, this tee is perfect for a casual weekend outing. The variety of colors and the durability of the material make it a go-to choice in my wardrobe.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 15
+        },
+        {
+            "name": "Isabella",
+            "title": "Radiant Results",
+            "body": "The GlowGlam Skincare Bundle has been a game-changer for my skincare routine. The combination of products works seamlessly to leave my skin feeling refreshed and rejuvenated. The quality of ingredients and the gentle formulations make it suitable for my sensitive skin. I've noticed a positive difference in the overall texture and radiance of my skin. A must-try for anyone looking to elevate their skincare regimen.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 16
+          },
+          {
+            "name": "Ethan",
+            "title": "Quick and Efficient",
+            "body": "The Revitalize Pro Hair Dryer has made my morning routine more efficient. It dries my hair quickly without causing excessive heat damage. The various heat and speed settings provide flexibility, and the lightweight design makes it easy to handle. The added diffuser attachment is a bonus for achieving natural curls. A reliable choice for those looking for a high-performance hair dryer.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 17
+          },
+          {
+            "name": "Aiden",
+            "title": "Essential Nutrition",
+            "body": "The VitaBoost Daily Multivitamin has become a staple in my daily routine. The comprehensive blend of vitamins and minerals supports overall health and well-being. The easy-to-swallow capsules and the absence of aftertaste make it a hassle-free addition to my morning routine. I've noticed an increase in energy and vitality since incorporating VitaBoost into my lifestyle.",
+            "rating": 5,
+            "author_id": 1,
+            "product_id": 18
+          },
+          {
+            "name": "Aria",
+            "title": "Soothing Ambiance",
+            "body": "The Serenity Aromatherapy Diffuser has transformed my living space into a sanctuary of relaxation. The calming scents create a soothing ambiance, perfect for unwinding after a long day. The adjustable mist settings and the soft LED lighting enhance the overall experience. The compact design and silent operation make it an ideal addition to any room.",
+            "rating": 4,
+            "author_id": 1,
+            "product_id": 19
+          },
+          {
+            "name": "Liam",
+            "title": "Convenient Mixing",
+            "body": "The FitFuel Pro Blender Bottle has simplified my post-workout nutrition routine. The built-in blender ball ensures smooth mixing of protein shakes, and the leak-proof design gives me confidence when on the go. The convenient size and easy-to-clean features make it my go-to bottle for staying fueled and hydrated. A practical choice for fitness enthusiasts.",
+            "rating": 3,
+            "author_id": 1,
+            "product_id": 20
+          }        
+    ]
+
+    
+    
+}
+

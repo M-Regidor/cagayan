@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faStar } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
 import { fetchProduct, selectProduct } from "../../store/productReducer";
 import { createReview, editReview, fetchReview, selectReview } from "../../store/reviewReducer";
@@ -53,6 +53,7 @@ const ReviewForm = () => {
     const [title, setTitle] = useState(review.title)
     const [name, setName] = useState(review.name)
     const [errors, setErrors] = useState({})
+    const [hover, setHover] = useState(null)
 
     const handleError = field => {
         switch (field) {
@@ -121,49 +122,30 @@ const ReviewForm = () => {
                         <p>{product.name}</p>
                     </div>
                     <form onSubmit={handleSubmit}>
-                        <label>
                             <h3>Overall rating</h3>
-                            <input
-                                type="radio"
-                                name="rating"
-                                value={1}
-                                checked={rating === 1}
-                                onChange={handleRatingChange}
-                                />{' '}
-                                1
-                            <input
-                                type="radio"
-                                name="rating"
-                                value={2}
-                                checked={rating === 2}
-                                onChange={handleRatingChange}
-                                />{' '}
-                                2
-                            <input
-                                type="radio"
-                                name="rating"
-                                value={3}
-                                checked={rating === 3}
-                                onChange={handleRatingChange}
-                                />{' '}
-                                3
-                            <input
-                                type="radio"
-                                name="rating"
-                                value={4}
-                                checked={rating === 4}
-                                onChange={handleRatingChange}
-                                />{' '}
-                                4
-                            <input
-                                type="radio"
-                                name="rating"
-                                value={5}
-                                checked={rating === 5}
-                                onChange={handleRatingChange}
-                                />{' '}
-                                5
-                            </label>
+                        <div className="create-review-rating">
+                            {[...Array(5)].map((star, index) => {
+                                const currentRating = index + 1
+                                return (
+                                    <label key={index}>
+                                        <input 
+                                        type="radio"
+                                        name="rating"
+                                        value={currentRating}
+                                        onClick={handleRatingChange}
+                                        />
+                                        <FontAwesomeIcon
+                                        className="star"
+                                        icon={faStar}
+                                        size={50}
+                                        color={currentRating <= (hover || rating) ? "#ffc107" : "#C0C0C0"}
+                                        onMouseEnter={() => setHover(currentRating)}
+                                        onMouseLeave={()=> setHover(null)}
+                                        />
+                                    </label>
+                                )
+                            })}
+                        </div>
                             {handleError("rating")}
                             <label className="headline">
                                 <h3>Headline</h3>

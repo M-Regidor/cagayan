@@ -6,9 +6,26 @@ import ProductIndexItem from "./ProductIndexItem"
 
 
 
+
 const ProductIndex = ({category, keyword}) => {
     const dispatch = useDispatch()
-    const products = useSelector(selectProductsArray)
+    let products = useSelector(selectProductsArray)
+    
+    const shuffleProducts = (arr) => {
+        return arr.sort(()=> Math.random() - 0.5);
+    }
+
+    if (!category && !keyword) products = shuffleProducts(products)
+
+    let title;
+    
+    if (category) {
+        title = category
+    } else if (keyword){
+        title = `Results for ${keyword}` 
+    } else {
+        title = "All Products"
+    }
 
     useEffect(()=> {
         if (category){
@@ -22,14 +39,17 @@ const ProductIndex = ({category, keyword}) => {
 
     return (
         <div className="product-background">
-            <ul className="product-container">
-                {products.map(product => (
-                    <ProductIndexItem
-                        key={product.id}
-                        product={product}
-                    />
-                ))}
-            </ul>
+            <div className="product-index-container">
+                <h2>{title}</h2>
+                <ul className="product-container">
+                    {products.map(product => (
+                        <ProductIndexItem
+                            key={product.id}
+                            product={product}
+                        />
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }

@@ -11,8 +11,11 @@ def file_paths(product_name)
 end
 
 @products.each do |product|
+  rating = Review.where(product_id: product.id).average(:rating).round()
+
   json.set! product.id do
     json.extract! product, :id, :name, :price, :category
     json.imgUrls product.images.attached? ? [url_for(product.images.first)] : file_paths(product.name)
+    json.rating rating
   end
 end

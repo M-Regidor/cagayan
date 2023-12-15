@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: 90px;
+    background: beige;
+    margin-top: 100px;
+}
+
+.link-icons {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    gap: 15px;
+}
+
+.link-icons a img {
+    height: 70px;
+}

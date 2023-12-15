@@ -8,5 +8,26 @@
 
 .review-container {
     display: flex;
-    padding-left: 50px;
+    min-height: 700px;
+    margin-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.review-create {
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+}
+
+.review-create button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ffffff; /* Set your button background color */
+    color: black; /* Set your button text color */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Set your shadow values */
+    transition: box-shadow 0.3s ease; 
 }

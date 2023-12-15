@@ -21,7 +21,7 @@ const ReviewIndexItem = ({review, currentUser}) => {
             </div>
             <p>{rating(review.rating)} {review.title}</p>
             <p>Reviewed on {formatDate(review.createdAt)}</p>
-            <p>{review.body}</p>
+            <p className='review-body'>{review.body}</p>
             <div className='review-item-buttons'>
                 {isCurrentUser ? (
                     <>
