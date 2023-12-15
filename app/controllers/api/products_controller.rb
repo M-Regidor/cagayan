@@ -3,7 +3,8 @@ class Api::ProductsController < ApplicationController
     if params[:category]
       @products = Product.where("LOWER(category) LIKE ?", "%#{params[:category].downcase}%")
     elsif params[:keyword]
-      if params[:keyword] = "random"
+      debugger
+      if params[:keyword] == "random"
         @products = Product.order("RANDOM()").limit(9)
       else
         keyword = params[:keyword].downcase
