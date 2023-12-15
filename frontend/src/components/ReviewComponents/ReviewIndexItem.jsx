@@ -29,7 +29,7 @@ const ReviewIndexItem = ({review, currentUser}) => {
                         <button onClick={() => navigate(`/products/${review.productId}/edit-review/${review.id}`)}>Edit</button>
                     </>
                 ):(
-                    <button>Helpful</button>
+                    null
                     )}
             </div>
     </li> 
