@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     width: inherit;
-    height: 110px;
-    /* background: beige; */
+    height: 90px;
+    background: beige;
+    margin-top: 100px;
 }
 
 .link-icons {

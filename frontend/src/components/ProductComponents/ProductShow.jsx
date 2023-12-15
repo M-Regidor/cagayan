@@ -6,6 +6,8 @@ import ReviewIndex from "../ReviewComponents/ReviewIndex"
 import { addCartItem } from "../../store/cartItem.Reducer"
 import { fetchReviews, selectReviewsArray } from "../../store/reviewReducer"
 import { rating } from "../../utils/dateUtil"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTruckFast, faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import "./ProductShow.css"
 
 
@@ -17,7 +19,23 @@ const ProductShow = () => {
     const reviews = useSelector(selectReviewsArray)
     const product = useSelector(selectProduct(productId))
 
-    
+    const currentDate = new Date()
+    const futureDate = new Date()
+    const plusDate = new Date()
+    const randomDays = Math.floor(Math.random() * 6) + 5;
+
+    plusDate.setDate(currentDate.getDate() + 1)
+    futureDate.setDate(currentDate.getDate() + randomDays)
+
+    const formattedPlusDate = plusDate.toLocaleDateString("en-US",{
+        month: "long",
+        day: "numeric"
+    })
+
+    const formattedDate = futureDate.toLocaleDateString("en-US",{
+        month: "long",
+        day: "numeric"
+    })
 
     const currentUser = useSelector(state => {
         const id = state.session.currentUserId;
@@ -65,7 +83,9 @@ const ProductShow = () => {
                     </div>
                     <div className="show-details-middle">
                             <div className="show-product-details">
-                                <div className="show-details-title">{product.name}</div>
+                                <div className="show-details-title">
+                                    <h2>{product.name}</h2>
+                                </div>
                                 <div className="show-details-price">
                                     <h5>${product.price}</h5>
                                     <div>{rating(product.rating)}</div>
@@ -79,7 +99,21 @@ const ProductShow = () => {
                     <div className="show-details-right">
                         <div className="show-buy-container">
                             <div className="show-buy-menu-main">
-                                <p>${product?.price}</p>
+                                <h2>${product?.price}</h2>
+                                <ul className="show-buy-content">
+                                  <li>
+                                    <FontAwesomeIcon icon={faCartPlus} color="#808080"/>
+                                    {"   One-Day shipping"}
+                                  </li>
+                                  <li>
+                                    <FontAwesomeIcon icon={faTruckFast}/> FREE delivery Tomorrow
+                                    <br />{formattedPlusDate}
+                                  </li>
+                                </ul>
+                                    <div className="show-buy-shipping">
+                                        <p>Standard estimated delivery {formattedDate}</p>
+                                        <h3>In Stock</h3>
+                                    </div>
                                 <div className="show-buy-buttons">
                                     <button 
                                     className="show-buy-cart"
@@ -87,8 +121,11 @@ const ProductShow = () => {
                                     >Add to Cart</button>
                                     <button className="show-buy-now">Buy Now</button>
                                 </div>
+                                <ul className="show-buy-info">
+                                    <li>Ships from Cagayan</li>
+                                    <li>Sold by Cagayan</li>
+                                </ul>
                             </div>
-                            <div className="show-buy-menu-sub"></div>
                         </div>
                     </div>
                 </div>

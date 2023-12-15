@@ -27,5 +27,6 @@
 }
 
 .deal-info img {
-    height: 80%;
+    height: 280px;
+    object-fit: cover;
 }

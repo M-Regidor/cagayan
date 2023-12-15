@@ -127,7 +127,7 @@ const ReviewForm = () => {
                             {[...Array(5)].map((star, index) => {
                                 const currentRating = index + 1
                                 return (
-                                    <label>
+                                    <label key={index}>
                                         <input 
                                         type="radio"
                                         name="rating"

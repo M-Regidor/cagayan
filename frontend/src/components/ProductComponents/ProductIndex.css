@@ -2,10 +2,11 @@
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     height: inherit;
     min-width: 800px;
+    min-height: 1000px;
     margin-top: 20px;
 
 }

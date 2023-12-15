@@ -14,7 +14,7 @@
     padding-right: 20px;
     padding-bottom: 40px;
     gap: 30px;
-    border: 2px solid red;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -45,11 +45,17 @@
 
 .login-container button {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 18px;
-    background: #ffff00;
-    padding: 8px;
-    border-radius: 10px;
+    display: inline-block;
+    /* padding: 5px 10px; */
+    text-decoration: none;
+    background-color: rgb(240, 240, 102);
+    color: black;
     border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+    border-radius: 10px;
+    height: 40px;
+    font-size: 18px;
     outline: none;
     cursor: pointer;
 }

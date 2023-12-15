@@ -11,14 +11,28 @@
 
 .review-item-buttons {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .review-item-buttons button {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: inline-block;
+    /* padding: 5px 10px; */
+    background: rgb(206, 201, 201);
+    text-decoration: none;
+    color: black;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+    font-size: 15px;
     border-radius: 10px;
-    border: 1px;
     height: 35px;
     width: 80px;
     cursor: pointer;
+    outline: none;
+}
+
+.review-body {
+    line-height: 25px;
 }
 

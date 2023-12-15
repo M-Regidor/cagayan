@@ -55,6 +55,8 @@
     border-radius: 10px;
     border: none;
     margin: 0;
+    padding-left: 20px;
+    font-size: 15px;
 }
 
 .navbar-top-middle form input:focus {
@@ -153,6 +155,8 @@
 }
 
 .navbar-bottom {
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: inherit;
     min-width: inherit;
@@ -162,7 +166,6 @@
 .navbar-bottom-menu {
     display: flex;
     height: inherit;
-    width: 50%;
     gap: 15px;
     padding-left: 20px;
     padding-right: 20px;

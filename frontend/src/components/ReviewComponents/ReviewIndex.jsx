@@ -31,7 +31,7 @@ const ReviewIndex = ({reviews, productId}) => {
 
     return (
         <div className="review-container">
-            <div>
+            <div className="review-create">
                 <h3>Review this product</h3>
                 <p>Share your thoughts with other customers</p>
                 <button onClick={handleClick} >Write a customer review</button>
