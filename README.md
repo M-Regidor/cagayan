@@ -1,6 +1,16 @@
 # Cagayan
 
-An Amazon clone project named Cagayan that incorporates features such as user account creation, exploration of items, and leaving reviews on products.
+Cagayan is an Amazon clone project that emulates the renowned e-commerce platform. It incorporates a range of features to deliver a comprehensive shopping experience. Here's what you can expect:
+
+- **User Account Creation:** Tailor your shopping experience by creating a personalized user account on Cagayan.
+
+- **Product Exploration:** Discover a diverse range of products on Cagayan with the ability to search by keywords or explore various categories.
+
+- **Review System:** Leave your mark by sharing product reviews and ratings.
+
+- **Shopping Cart and Checkout:** Seamlessly add items to your cart and proceed through a secure checkout process.
+
+
 
 ## Live Site
 
@@ -21,17 +31,19 @@ An Amazon clone project named Cagayan that incorporates features such as user ac
 - **Hosting:**
   - Render
 
-### Features Highlights
 
-## Products
+
+## Features Highlights
+
+### Products
 
 Users can explore products listed on Cagayan by keywords or categories.
 
-## Challenges Faced
+### Challenges Faced
 
-The products contained a lot of data that I had to keep organized and easily able to create more when needed.
+Efficiently managing and displaying product details, including images, while optimizing AWS resource usage.
 
-## Solutions
+### Solutions
 
 I stored the product data in a JSON file format, so I can easily add more during development.
 
@@ -47,8 +59,8 @@ I stored the product data in a JSON file format, so I can easily add more during
 }
 ```
 
-# Two different seeds
-Made two different seed files, one for production and development, to keep down the usage of my resources on AWS.
+#### Dual Seed Files
+Optimize resource usage with separate seed files for development and production environments.
 
 ``` ruby
 if Rails.env.development?
@@ -57,7 +69,7 @@ elsif Rails.env.production?
   load(Rails.root.join('db', 'production_seeds.rb'))
 end
 ```
-# Function for using local images
+#### Function for using local images
 Incorporated a function that would search a local directory for image files during development. As long as the directories follow a naming format, it would use the file paths in the directory for local images during development, making it faster for me to add more product data.
 ``` ruby
 def file_paths(product_name)
@@ -83,3 +95,6 @@ end
 end
 ```
  
+### Future Features
+- Q&A for products
+- Review likes (Users can like reviews if they find them helpful)
