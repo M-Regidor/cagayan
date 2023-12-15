@@ -15,6 +15,7 @@
 .cart-item-image {
     height: 200px;
     width: 260px;
+    object-fit: cover;
 }
 
 .cart-item-details {

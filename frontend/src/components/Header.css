@@ -95,7 +95,6 @@
 /* User drop down */
 .user-menu {
     display: none;
-    border: 1px solid black;
     background-color: beige;
     border-radius: 3px;
     padding-right: 10px;
