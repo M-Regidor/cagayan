@@ -21,17 +21,17 @@ An Amazon clone project named Cagayan that incorporates features such as user ac
 - **Hosting:**
   - Render
 
-## Features Highlights
+### Features Highlights
 
-### Products
+## Products
 
 Users can explore products listed on Cagayan by keywords or categories.
 
-#### Challenges Faced
+## Challenges Faced
 
 The products contained a lot of data that I had to keep organized and easily able to create more when needed.
 
-#### Solutions
+## Solutions
 
 I stored the product data in a JSON file format, so I can easily add more during development.
 
@@ -43,12 +43,11 @@ I stored the product data in a JSON file format, so I can easily add more during
       "price": "149.99",
       "description": "High-quality stainless steel cookware set featuring a variety of pots and pans. Durable, non-reactive, and suitable for a wide range of cooking styles.",
       "category": "Home and Kitchen Appliances",
-      "rating": "4.8"
     }
 }
 ```
 
-## Two different seeds
+# Two different seeds
 Made two different seed files, one for production and development, to keep down the usage of my resources on AWS.
 
 ``` ruby
@@ -58,7 +57,7 @@ elsif Rails.env.production?
   load(Rails.root.join('db', 'production_seeds.rb'))
 end
 ```
-## Function for using local images
+# Function for using local images
 Incorporated a function that would search a local directory for image files during development. As long as the directories follow a naming format, it would use the file paths in the directory for local images during development, making it faster for me to add more product data.
 ``` ruby
 def file_paths(product_name)
