@@ -19,6 +19,7 @@ const ProductIndexItem = ({product}) => {
     })
 
     const formattedDate = futureDate.toLocaleDateString("en-US",{
+        weekday: "short",
         month: "long",
         day: "numeric"
     })
@@ -47,7 +48,7 @@ const ProductIndexItem = ({product}) => {
                         <p>$</p>
                         <h3>{product.price}</h3>
                     </div>
-                    <div className="product-delivery">estimated delivery date: {formattedDate}</div>
+                    <div className="product-delivery">estimated delivery date: <br />{formattedDate}</div>
                 </div>
                 <div className="product-cart">
                     <button onClick={handleClick}>Add to Cart</button>

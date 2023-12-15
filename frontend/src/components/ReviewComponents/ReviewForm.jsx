@@ -178,7 +178,7 @@ const ReviewForm = () => {
                                 </div>
                                     {handleError("name")}
                             </label>
-                            <div>
+                            <div className="review-submit">
                                 <button>Submit</button>
                             </div>
                     </form>

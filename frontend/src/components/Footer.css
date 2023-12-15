@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     width: inherit;
+    min-width: 1300px;
     height: 90px;
     background: beige;
     margin-top: 100px;

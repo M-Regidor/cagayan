@@ -33,6 +33,7 @@ const ProductShow = () => {
     })
 
     const formattedDate = futureDate.toLocaleDateString("en-US",{
+        weekday:"short",
         month: "long",
         day: "numeric"
     })
@@ -106,12 +107,12 @@ const ProductShow = () => {
                                     {"   One-Day shipping"}
                                   </li>
                                   <li>
-                                    <FontAwesomeIcon icon={faTruckFast}/> FREE delivery Tomorrow
+                                    <FontAwesomeIcon icon={faTruckFast}/> FREE delivery Tomorrow,
                                     <br />{formattedPlusDate}
                                   </li>
                                 </ul>
                                     <div className="show-buy-shipping">
-                                        <p>Standard estimated delivery {formattedDate}</p>
+                                        <p>Standard estimated delivery, <br />{formattedDate}</p>
                                         <h3>In Stock</h3>
                                     </div>
                                 <div className="show-buy-buttons">

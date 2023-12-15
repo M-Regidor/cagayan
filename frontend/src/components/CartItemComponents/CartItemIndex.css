@@ -17,16 +17,19 @@
 }
 
 .cart-total button {
-    font-size: 14px;
-    background: #ffff00;
-    padding: 8px;
-    border-radius: 10px;
-    width: 190px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(240, 240, 102);
+    color: black;
     border: none;
-    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+    height: 35px;
+    width: inherit;
     cursor: pointer;
+    font-weight: bold;
 }
-
 .cart-total button:hover {
     background: #e0e031;
 }
