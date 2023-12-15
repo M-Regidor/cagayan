@@ -33,8 +33,6 @@ export const fetchCartItems = (userId) => async(dispatch) => {
     if (res.ok){
         data = await res.json()
         dispatch(receiveCartItems(data))
-    } else {
-        console.log("cart items issues")
     }
 
 }
@@ -47,19 +45,15 @@ export const addCartItem = (cartItem) => async (dispatch) =>{
         data = await res.json()
         dispatch(receiveCartItem(data.cartItem))
     } else {
-        console.log("add cart issue")
+       data = await res.json()
     }
 }
 
 export const removeItem = cartItemId => async(dispatch) => {
     const res = await deleteCartItem(cartItemId)
-    let data;
 
     if (res.ok) {
         dispatch(removeCartItem(cartItemId))
-    } else {
-        data = res.json()
-        console.log(data)
     }
 }
 
@@ -79,7 +73,8 @@ export const updateQuantity = (cartItemId, quantity) => async(dispatch) => {
         data = await res.json()
         dispatch(receiveCartItem(data.cartItem))
     } else {
-        console.log("something went wrong")
+        data = await res.json()
+        throw data
     }
 }
 
