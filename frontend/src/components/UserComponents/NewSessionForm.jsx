@@ -26,6 +26,10 @@ const NewSessionForm = () => {
             setErrors(msg.errors)
         })
     }
+
+    const demoLogin = () => {
+        dispatch(loginUser({email:"demo@user.io", password:"test123"}))
+    }
     
     const handleError = () => {
         if (errors){
@@ -60,10 +64,12 @@ const NewSessionForm = () => {
                 {handleError()}
                 <button>Sign in</button>
             </form>
-
+         
+           
             <div className="create-account">
                 <p>New to Cagayan</p>
                 <button onClick={() => navigate("/signup")}>Create your Cagayan account</button>
+                <button id="demo-login" onClick={demoLogin}>Demo Login</button>
             </div>
         </div>
             

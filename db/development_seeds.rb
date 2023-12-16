@@ -16,8 +16,9 @@ ActiveRecord::Base.connection.execute('TRUNCATE TABLE users RESTART IDENTITY CAS
 ActiveRecord::Base.connection.execute('TRUNCATE TABLE cart_items RESTART IDENTITY CASCADE')
 ActiveRecord::Base.connection.execute('TRUNCATE TABLE reviews RESTART IDENTITY CASCADE')
 
-
+User.create(email: "admin@cagayan.com", name: "admin", password: "123456")
 User.create(email: "demo@user.io", name: "Demo User", password:"test123")
+
 puts "development seeds"
 puts "seeding home products..."
 
