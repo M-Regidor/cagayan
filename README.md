@@ -57,21 +57,15 @@ I stored the product data in a JSON file format, so I can easily add more during
       "category": "Home and Kitchen Appliances",
     }
 }
+
 ```
 
-#### Dual Seed Files
+#### Function for using local images
+Incorporated a function that would search a local directory for image files during development. As long as the directories follow a naming format, it would use the file paths in the directory for local images during development, making it faster for me to add more product data.
 Optimize resource usage with separate seed files for development and production environments.
 
 ``` ruby
-if Rails.env.development?
-  load(Rails.root.join('db', 'development_seeds.rb'))
-elsif Rails.env.production?
-  load(Rails.root.join('db', 'production_seeds.rb'))
-end
-```
-#### Function for using local images
-Incorporated a function that would search a local directory for image files during development. As long as the directories follow a naming format, it would use the file paths in the directory for local images during development, making it faster for me to add more product data.
-``` ruby
+
 def file_paths(product_name)
   dir_path = "frontend/public/assets/product-images/#{product_name}"
   if File.directory?(dir_path)
@@ -83,6 +77,8 @@ def file_paths(product_name)
     Array.new()
   end
 end
+
+
 
 @products.each do |product|
   rating = Review.where(product_id: product.id).average(:rating).round
