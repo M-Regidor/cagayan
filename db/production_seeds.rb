@@ -12,6 +12,7 @@ Product.destroy_all
 ActiveRecord::Base.connection.execute('TRUNCATE TABLE products RESTART IDENTITY CASCADE')
 ActiveRecord::Base.connection.execute('TRUNCATE TABLE users RESTART IDENTITY CASCADE')
 
+User.create(email: "admin@cagayan.com", name: "admin", password: "123456")
 User.create(email: "demo@user.io", name: "Demo User", password:"test123")
 puts "seeding production"
 puts "seeding home products..."
