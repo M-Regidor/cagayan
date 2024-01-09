@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { fetchProduct, selectProduct } from "../../store/productReducer"
@@ -18,6 +18,7 @@ const ProductShow = () => {
     const {productId} = useParams()
     const reviews = useSelector(selectReviewsArray)
     const product = useSelector(selectProduct(productId))
+    const [mainImage, setMainImage] = useState(Math.floor(Math.random() * 3))
 
     const currentDate = new Date()
     const futureDate = new Date()
@@ -68,15 +69,15 @@ const ProductShow = () => {
                 <div className="show-details-container">
                     <div className="show-details-left">
                         <div className="show-img-container">
-                            <div className="show-img-main"><img src={product.imgUrls[0]} alt="" /> </div>
+                            <div className="show-img-main"><img src={product.imgUrls[mainImage]} alt="" /> </div>
                             <div className="show-img-sub-container">
-                                <div className="show-img-sub">
+                                <div className="show-img-sub" onClick={() => setMainImage(0)}>
                                     <img src={product.imgUrls[0]} alt="" />
                                 </div>
-                                <div className="show-img-sub">
+                                <div className="show-img-sub" onClick={() => setMainImage(1)}>
                                     <img src={product.imgUrls[1]} alt="" />
                                 </div>
-                                <div className="show-img-sub">
+                                <div className="show-img-sub" onClick={() => setMainImage(2)} >
                                     <img src={product.imgUrls[2]} alt="" />
                                 </div>
                             </div>
