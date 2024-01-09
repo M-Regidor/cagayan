@@ -41,6 +41,7 @@ const ProductIndex = ({category, keyword}) => {
         <div className="product-background">
             <div className="product-index-container">
                 <h2>{title}</h2>
+                {products.length === 0 ? <h3>Sorry nothing found for {keyword}</h3> : null}
                 <ul className="product-container">
                     {products.map(product => (
                         <ProductIndexItem
