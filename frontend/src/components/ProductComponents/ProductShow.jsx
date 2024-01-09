@@ -120,7 +120,7 @@ const ProductShow = () => {
                                     className="show-buy-cart"
                                     onClick={handleClick}
                                     >Add to Cart</button>
-                                    <button className="show-buy-now">Buy Now</button>
+                                    {/* <button className="show-buy-now">Buy Now</button> */}
                                 </div>
                                 <ul className="show-buy-info">
                                     <li>Ships from Cagayan</li>
