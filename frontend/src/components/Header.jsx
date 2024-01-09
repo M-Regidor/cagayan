@@ -53,7 +53,7 @@ const Header = () => {
                     <div className="search-bar-container">
                         <form onSubmit={handleSubmit}>
                             <input
-                            placeholder="Search Cagayn"
+                            placeholder="Search Cagayan"
                             type="text"
                             value={keyword}
                             onChange={e => setKeyword(e.target.value)}
