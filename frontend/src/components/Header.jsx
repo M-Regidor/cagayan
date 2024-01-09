@@ -50,14 +50,17 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-top-middle">
-                    <form onSubmit={handleSubmit}>
-                        <input 
-                        type="text"
-                        value={keyword}
-                        onChange={e => setKeyword(e.target.value)}
-                        />
-                        <button><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
-                    </form>
+                    <div className="search-bar-container">
+                        <form onSubmit={handleSubmit}>
+                            <input
+                            placeholder="Search Cagayn"
+                            type="text"
+                            value={keyword}
+                            onChange={e => setKeyword(e.target.value)}
+                            />
+                            <button><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
+                        </form>
+                    </div>
                 </div>
 
                 <div className="navbar-top-right">
