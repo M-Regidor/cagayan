@@ -36,7 +36,7 @@ const ProductIndexItem = ({product}) => {
     
     return (
         <li className="product-info-container" key={product.id}>
-            <Link to={`/products/${product.id}`} className="product-info-top">                            
+            <Link to={`/products/${product.id}`} className="product-info-top" >                            
                 <img src={product.imgUrls} alt="" />
             </Link>
             <div className="product-info-bottom">

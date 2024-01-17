@@ -8,11 +8,11 @@
 .product-info-top{
     width: inherit;
     height: 310px;
-    /* background-image: ; */
 }
 
 .product-info-top img{
     object-fit: cover;
+    background: url("./public/assets/logo-cart.png") center/cover no-repeat; 
 }
 
 .product-img {
