@@ -67,3 +67,5 @@ yarn-debug.log*
 !/public
 
 public/assets/product-images
+
+.vscode

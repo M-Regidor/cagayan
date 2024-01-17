@@ -3,12 +3,12 @@
     flex-direction: column;
     width: 250px;
     height: 700px;
-    /* margin-bottom: 200px; */
 }
 
 .product-info-top{
     width: inherit;
     height: 310px;
+    /* background-image: ; */
 }
 
 .product-info-top img{

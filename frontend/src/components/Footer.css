@@ -1,8 +1,9 @@
 .footer {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     width: inherit;
-    min-width: 1300px;
+    min-width: 1100px;
     height: 90px;
     background: beige;
     margin-top: 25px;
@@ -12,9 +13,14 @@
     display: flex;
     align-items: center;
     height: inherit;
-    gap: 15px;
+    gap: 20px;
+}
+
+.link-icons a {
+    color: black;
 }
 
 .link-icons a img {
     height: 70px;
 }
+
